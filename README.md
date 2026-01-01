@@ -1,0 +1,1 @@
+[Philosophy Pages](https://www.philosophypages.com) has an outdated and unpolished look which I aim to improve with this repository. All content written by Garth Kemerling except when indicated otherwise. Website provided under the [Creative Commons Attribution-ShareAlike 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/) license as per the original.
