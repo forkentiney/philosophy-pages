@@ -1,0 +1,10 @@
+body {margin-left: 15px; width: 660px; font-family: times new roman, serif}
+a:link {color: #0000cc}
+a:visited {color: #cc0000}
+a:active {color: #006600}
+h3 {text-align: left}
+h1, h2, h4, h5 {text-align: center}
+h5 {font-weight: normal}
+p {text-indent: 2em; text-align: justify}
+cite {font-style: italic}
+a {text-decoration: none}

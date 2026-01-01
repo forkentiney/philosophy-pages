@@ -1,0 +1,128 @@
+<html lang=en>
+
+<!-- Mirrored from www.philosophypages.com/lg/e11d.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+<head>
+<link rel="shortcut icon" href="../vy/logic.ico">
+
+<meta name="keywords" content="philosophy, logic, symbolic, statement, invalidity, proof, inconsistency">
+<meta name="description" content="An explanation of the basic elements of elementary logic.">
+<meta name="author" content="Garth Kemerling">
+<title>Proving Invalidity</title>
+<link rel=stylesheet type="text/css" href="zzl.css" title="lstyle">
+<body bgcolor="#cccc99"><center><table summary="Menu" width=85% border=0 cellspacing=0 cellpadding=2>
+<tr>
+<th rowspan=3 bgcolor="ddaaaa"><a href="../index-2.html">Philosophy Pages</a><br><br><a target="new" href="http://www.britannica.com/"><img src="../vy/briguide.gif"></a>
+<th>&nbsp;
+<th bgcolor="ffffcc">&nbsp;&nbsp;<a href="../dy/index.html">Dictionary</a>&nbsp;&nbsp;
+<th bgcolor="ffffff"><a href="../sy.html">&nbsp;Study Guide&nbsp;</a>
+<th bgcolor="cccc99"><a href="index.html">Logic</a>
+<th>&nbsp;
+<th bgcolor="ffffff"><a href="../faq.html">F A Q s</a>
+<tr>
+<th>&nbsp;
+<th bgcolor="eeeeee"><a href="../hy/index.html">History</a>
+<th bgcolor="ccffcc"><a href="../dy/zt.html">Timeline</a>
+<th bgcolor="cccccc"><a href="../ph/index.html">Philosophers</a>
+<th>&nbsp;
+<th bgcolor="99ccff"><a href="../locke/index.html">Locke</a>
+<tr><th>&nbsp;
+</table>
+</center>
+<div><br>
+
+<h3>Invalidity and Inconsistency</h3>
+
+<h4><a name="inval">Proving Invalidity</a></h4>
+<p>Constructing proofs is an effective way to demonstrate that an argument of the propositional calculus is valid.
+If an argument happens to be invalid, of course, it would be impossible to construct a proof of its validity.
+But that's not a very good method of spotting invalid arguments, since my inability to devise an appropriate proof on a particular afternoon is as likely to result from my own limitations as from the general impossibility of doing so.
+<p>Of course, we could always fall back on truth-tables as a method of proving invalidity.
+We simply inspect the truth-table columns for all of the premises and the conclusion; if there is any line on which all of the premises are true while the conclusion is false, then the argument is invalid (and if not, it is valid).
+In this sense, truth-tables are a <a href="../dy/d2.html#depro">decision procedure</a>: in a finite number of steps, they will provide us with evidence of the validity or invalidity of any argument.
+But that finite number of steps can become extremely large.
+(With seven propositional variables and five premises, we would have to fill in 1,664 individual truth-values.)
+<p>Fortunately, we can often short-cut the process significantly when we suspect that an argument may be invalid.
+Remember, it only takes one line with true premises and a false conclusion to establish the invalidity of an invalid inference.
+So we don't really need to look at every line of the argument's truth-table; we can concentrate on our effort to find just the right one.
+Consider, for example, the following argument:
+<pre>
+	A &sup; (B &or; C)
+	D &sup; (E &or; F)
+	~B &sup; (F &or; G)
+	(F &sup; D) &bull; (~E &sup; ~D)
+	~G
+	_______________________
+
+	A &sup; (D &or; F)
+</pre>
+Instead of amassing a truth-table with 128 lines, let's see if we can focus in on just a few lines from among those that would establish the invalidity of the argument.
+<p>Since the crucial line must be one on which the conclusion is false, let's begin by assuming that<tt> A &sup; (D &or; F) </tt>is false.
+Since the only way for a conditional statement to be false is if its antecedent is true and its consequent is false, we know that<tt> A </tt>must be true and<tt> D &or; F </tt>must be false,
+and since a disjunction is false only when both of its disjuncts are false, we know that<tt> D </tt>and<tt> F </tt>must both be false on our crucial line of the truth-table.
+Notice how far we've come already:
+<pre>
+	A &sup; (B &or; C)                     A   B   C   D   E   F   G
+	D &sup; (E &or; F)       		
+	~B &sup; (F &or; G)                    <b>T</b>           <b>F</b>       <b>F</b>
+	(F &sup; D) &bull; (~E &sup; ~D)
+	~G
+	_______________________
+
+	A &sup; (D &or; F)
+</pre>
+There are only sixteen lines of the truth-table on which the conclusion is false, and those are the only ones we need to think about in our effort to prove the invalidity of the argument.
+
+<p>Now, let's begin ensuring that we also look only at lines on which the premises are all true.
+the fifth premise is easy:<tt> ~G </tt>is true if and only if<tt> G </tt> is false.
+And, since<tt> F </tt>and<tt> G </tt>are both false, the consequent of the third premise is false;
+in order to make that premise true, its antecedent,<tt> ~B </tt>must also be false, which entails that<tt> B </tt>must be true.
+Thus, we've narrowed our search even further:
+<pre>
+	A &sup; (B &or; C)                     A   B   C   D   E   F   G
+	D &sup; (E &or; F)	
+	~B &sup; (F &or; G)                    <b>T</b>   <b>T</b>       <b>F</b>       <b>F</b>   <b>F</b>
+	(F &sup; D) &bull; (~E &sup; ~D)
+	~G 
+	_______________________
+
+	A &sup; (D &or; F)
+</pre>
+Only four lines of the original 128 now matter, and as it turns out, the remaining premises are all true on each of those four lines.
+Assign either truth value to<tt> C </tt>and to<tt> E </tt>; taken along with the values for the other statements as shown above, they will be part of a line
+(one of four, in fact) on which the premises of an argument of this form are all true but its conclusion is false.
+<pre>
+	A &sup; (B &or; C)                     A   B   C   D   E   F   G
+	D &sup; (E &or; F)	
+	~B &sup; (F &or; G)                    <b>T</b>   <b>T</b>   <b>T</b>   <b>F</b>   <b>T</b>   <b>F</b>   <b>F</b>
+	(F &sup; D) &bull; (~E &sup; ~D)
+	~G 
+	_______________________
+
+	A &sup; (D &or; F)
+</pre>
+Thus, we have proven that the argument is invalid. When A, B, C, and E are true and D, F, and G are false, the premises are true and the conclusion false. If the inference were valid, that could never happen.
+<br><br>
+
+<h4><a name="incsty">Inconsistent Premises</a></h4>
+<p>Notice that if the premises of an argument are inconsistent&#0151;that is, if they directly contradict each other&#0151;then there will be no line in the truth-table for that argument on which all of the premises are true.
+In that case, the argument is valid no matter what its conclusion happens to be! It is impossible for the premises to be true while the conclusion is false simply because it is impossible for the premises to be true.
+<p>It's even possible to construct a valid proof for any conclusion once you accept contradictory premises:
+<pre>
+		1. A			premise
+		2. ~A			premise
+		3. A &or; X		1 Add.
+		4. X			3, 2 D.S.
+</pre>
+This is what's wrong with contradicting yourself: once you endorse contradictory propositions, you can prove anything.
+Although arguments with inconsistent premises are all valid, they cannot be <a href="../dy/s7.html#sound">sound</a>, since at least one of their premises must be false.<br><br>
+
+<font size=-1>
+<p><center> <hr title="-"><a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="../../licensebuttons.net/l/by-sa/3.0/88x31.png" /></a><br><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type"><em>The Philosophy Pages</em></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="../index.html" property="cc:attributionName" rel="cc:attributionURL">Garth Kemerling</a> are licensed under a <a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br>Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="../referral/contact.html" rel="cc:morePermissions">http://www.philosophypages.com/referral/contact.htm</a>.
+<br><br>&copy;1997, 2011 Garth Kemerling.<br>Last modified 12 November 2011.<br>
+Questions, comments, and suggestions may be sent to:<br><a
+href="../referral/contact.html">the Contact Page.</a></center></font>
+
+</div></body>
+
+<!-- Mirrored from www.philosophypages.com/lg/e11d.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+</html>

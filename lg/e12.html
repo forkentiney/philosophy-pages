@@ -1,0 +1,139 @@
+<html lang=en>
+
+<!-- Mirrored from www.philosophypages.com/lg/e12.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+<head>
+<link rel="shortcut icon" href="../vy/logic.ico">
+
+<meta name="keywords" content="philosophy, logic, symbolic, quantification, predicate, quantifier, generalization, instantiation, universal, existential">
+<meta name="description" content="An explanation of the basic elements of elementary logic.">
+<meta name="author" content="Garth Kemerling">
+<title>Quantification Theory</title>
+<link rel=stylesheet type="text/css" href="zzl.css" title="lstyle">
+<body bgcolor="#cccc99"><center><table summary="Menu" width=85% border=0 cellspacing=0 cellpadding=2>
+<tr>
+<th rowspan=3 bgcolor="ddaaaa"><a href="../index-2.html">Philosophy Pages</a><br><br><a target="new" href="http://www.britannica.com/"><img src="../vy/briguide.gif"></a>
+<th>&nbsp;
+<th bgcolor="ffffcc">&nbsp;&nbsp;<a href="../dy/index.html">Dictionary</a>&nbsp;&nbsp;
+<th bgcolor="ffffff"><a href="../sy.html">&nbsp;Study Guide&nbsp;</a>
+<th bgcolor="cccc99"><a href="index.html">Logic</a>
+<th>&nbsp;
+<th bgcolor="ffffff"><a href="../faq.html">F A Q s</a>
+<tr>
+<th>&nbsp;
+<th bgcolor="eeeeee"><a href="../hy/index.html">History</a>
+<th bgcolor="ccffcc"><a href="../dy/zt.html">Timeline</a>
+<th bgcolor="cccccc"><a href="../ph/index.html">Philosophers</a>
+<th>&nbsp;
+<th bgcolor="99ccff"><a href="../locke/index.html">Locke</a>
+<tr><th>&nbsp;
+</table>
+</center>
+<div><br>
+
+<h3>Quantification Theory</h3>
+
+<p>In this final lesson on symbolic logic, we'll take a very brief look at modern methods of representing the internal structure of propositions in first-order predicate calculus (or <a href="../dy/q.html#qfn">quantification theory</a>).
+Incorporating all of the propositional calculus along with a few new symbols and rules of inference, the predicate calculus provides another way of handling the same logical forms we examined in our study of categorical logic.
+<br><br>
+
+<h4><a name="const">Individuals, Predicates, and Quantifiers</a></h4>
+<p>In addition to the familiar symbols of the propositional calculus, quantification theory also employs special symbols of four special sorts: <ul>
+<li><a href="../dy/i9.html#indc">individual constants</a> (<tt>&nbsp;a, b, c, etc.&nbsp;</tt>) represent particular individual things&#0151;Allison, Bill, or this car, for example.
+<li><a href="../dy/p7.html#prco">predicate constants</a> (<tt>&nbsp;F, G, H, etc.&nbsp;</tt>) represent specific predicates&#0151;free, greedy, or heavy, for example.</ul>
+Writing an individual symbol directly after a predicate symbol signifies that this thing has that property.
+Thus, using the above examples, <tt>&nbsp;Fa, Gb, and Hc&nbsp;</tt> would signify "Allison is free," "Bill is greedy," and "This car is heavy" respectively.
+Since these are complete statements, they can be combined using the statement connectives to form such compound statements as <tt>&nbsp;Fa &bull; Gb, Hg &sup; Gb, and Hc &or; ~Hc&nbsp;</tt>.<ul>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th><th>statement<th>individual<th>predicate
+<tr><th>constants<td><tt>&nbsp;A, B, C...&nbsp;</tt><td><tt>&nbsp;a, b, c...&nbsp;</tt><td><tt>&nbsp;F, G, H...&nbsp;</tt>
+<tr><th>variables<td><tt>&nbsp;p, q, r...&nbsp;</tt><td><tt>&nbsp;...x, y, z&nbsp;</tt><td><tt></tt>
+<tr><th>operators<td><tt>&nbsp;~, &, v,&nbsp;<br>&nbsp;&sup;, &equiv;&nbsp;</tt><td><center><tt>(x)<br>(&exist;x)</tt></center><td><tt></tt>
+</table>
+<li><a href="../dy/i9.html#indv">individual variables</a> (<tt>&nbsp;x, y, z, etc.&nbsp;</tt>) are employed to refer to any predicate generally.
+<li><a href="../dy/q.html#qfrs">quantifiers</a> are
+<a name="qfrs">logical operators</a> that signify the range of individuals to which individual variables apply, either all <tt>&nbsp;(x)&nbsp;</tt> or some <tt>&nbsp;(&exist;x)&nbsp;</tt>.</ul>
+Put together, these symbols can be used to represent each of the four major forms of categorical proposition:<ul>
+<li><tt>&nbsp;(x)(Sx &sup; Px)&nbsp;</tt> corresponds to the <em><b>A</b></em> proposition, "<tt>All S are P</tt>."
+<li><tt>&nbsp;(x)(Sx &sup; ~Px)&nbsp;</tt> corresponds to the <em><b>E</b></em> proposition, "<tt>No S are P</tt>."
+<li><tt>&nbsp;(&exist;x)(Sx &bull; Px)&nbsp;</tt> corresponds to the <em><b>I</b></em> proposition, "<tt>Some S are P</tt>."
+<li><tt>&nbsp;(&exist;x)(Sx &bull; ~Px)&nbsp;</tt> corresponds to the <em><b>O</b></em> proposition, "<tt>Some S are not P</tt>."</ul>
+Any of the rules of replacement from the propositional calculus may be applied to these statements of quantification theory.
+Thus, for example, we can easily demonstrate the converse of an E proposition:
+<pre>
+		1. (x)(Sx &sup; ~Px)		premise
+		2. (x)(~~Px &sup; ~Sx)		1 Trans.
+		3. (x)(Px &sup; ~Sx)		2 D.N.
+</pre>
+
+<h4><a name="rules">Quantification Rules</a></h4>
+<p>In order to prove the validity of syllogisms, however, we first need to strip the quantifiers from each statement, apply the appropriate rules of inference, and then restore quantifiers to each statement.
+The four <a href="../dy/q.html#qfru">quantification rules</a> dictate the conditions under which it is permissible to delete or add a quantifier:<ul>
+<li>Using<tt> &Oslash;x </tt> to represent any expression in which the individual variable "<tt>x</tt>" appears, <a href="../dy/u.html#ui">Universal Instantiation</a> (UI) can be stated as an argument of the form:
+<pre>
+		(x)( &Oslash;x )
+		_______
+
+		&Oslash;u
+</pre>
+The "<tt>u</tt>" in this case can be any arbitrarily chosen individual constant or variable.
+In the context of a proof, for example, the truth of "<tt>(x)[Fx &sup;(Gx &or; Hx)]</tt>" could be used to justify that of "<tt>Fb &sup; (Gb &or; Hb)</tt>." If the statement holds for all<tt> x</tt>, then it certainly must hold for<tt> b</tt>.<br><br>
+<li>In similar fashion, <a href="../dy/u.html#ug">Universal Generalization</a> (UG) has the form:
+<pre>
+		&Oslash;y
+		_______
+
+		(x)( &Oslash;x )
+</pre>
+In this case, however, it is crucial that the "<tt>y</tt>" is an arbitrarily chosen individual&#0151;that is, an individual that was introduced into the proof by an application of UI.
+Only then can we be sure that what holds of it is not some special feature but something that would hold equally well of all " <tt>x</tt>."<br><br>
+<li>Removing an existential quantifier requires application of <a href="../dy/e9.html#exi">Existential Instantiation</a> (EI), and argument of the form:
+<pre>
+		(&exist;x)( &Oslash;x )
+		_______
+
+ 		&Oslash;u
+</pre>
+In this case, the individual constant "<tt>u</tt>" must be one which has never been used in any earlier line of the proof; otherwise, we might mistakenly associate two things which have nothing in common.
+Thus, it is usually best to employ EI as soon as possible (certainly, before any application of UI) in a proof.<br><br>
+<li>Finally, <a href="../dy/e9.html#exg">Existential Generalization</a> (EG) is an argument of the form:
+<pre>
+		&Oslash;u
+		_______
+
+		(&exist;x)( &Oslash;x )
+</pre>
+Here, as in UI, "<tt>u</tt>" may be any individual constant or variable.
+</ul> 
+Using these quantification rules together with the inference and replacement rules of the propositional calculus, it is possible to prove the validity of any of the valid categorical syllogisms.
+For <em><b>EIO-1</b></em>, for example:
+<pre>
+		 1. (x)(Mx &sup; ~Px)		premise
+		 2. (&exist;x)(Sx &bull; Mx)		premise
+		 3. Sd &bull; Md			2 EI
+		 4. Md &sup; ~Pd			1 UI
+		 5. Sd				3 Simp.
+		 6. Md &bull; Sd			3 Comm.
+		 7. Md				6 Simp.
+		 8. ~Pd				4, 7 M.P.
+		 9. Sd &bull; ~Pd			5, 8 Conj.
+		10. (&exist;x)(Sx &bull; ~Px)		9 EG
+</pre> <br><br>
+
+<h4><a name="asyl">Asyllogistic Inferences</a></h4>
+<p>Quantification theory makes it possible to prove the validity of many arguments that could not easily be expressed in categorical logic at all.
+In fact, <a href="../ph/russ.html"><em>Russell</em></a> and <a href="../dy/w9.html#whit">Whitehead</a> showed less than a hundred years ago that
+a higher-order predicate calculus (one that fills in the chart above by including variables and quantifiers for predicates as well as for individuals) is sufficient to provide
+<a href="../dy/l5.html#logz">logical demonstrations of simple arithmetical truths</a>.
+A few decades later, however, <a href="../dy/g5.html#goed">G&ouml;del</a> showed that any such powerful system must contain at least one proposition whose truth or falsity cannot be proven.
+<br><br>
+
+<font size=-1>
+<p><center> <hr title="-"><a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="../../licensebuttons.net/l/by-sa/3.0/88x31.png" /></a><br><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type"><em>The Philosophy Pages</em></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="../index.html" property="cc:attributionName" rel="cc:attributionURL">Garth Kemerling</a> are licensed under a <a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br>Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="../referral/contact.html" rel="cc:morePermissions">http://www.philosophypages.com/referral/contact.htm</a>.
+<br><br>&copy;1997, 2011 Garth Kemerling.<br>Last modified 12 November 2011.<br>
+Questions, comments, and suggestions may be sent to:<br><a
+href="../referral/contact.html">the Contact Page.</a></center></font>
+
+</div></body>
+
+<!-- Mirrored from www.philosophypages.com/lg/e12.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+</html>

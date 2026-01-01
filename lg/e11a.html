@@ -1,0 +1,238 @@
+<html lang=en>
+
+<!-- Mirrored from www.philosophypages.com/lg/e11a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+<head>
+<link rel="shortcut icon" href="../vy/logic.ico">
+
+<meta name="keywords" content="philosophy, logic, symbolic, statement, proof, rule, inference, constructive dilemma, absorption, simplification, conjunction, addition, proof procedure">
+<meta name="description" content="An explanation of the basic elements of elementary logic.">
+<meta name="author" content="Garth Kemerling">
+<title>Rules of Inference</title>
+<link rel=stylesheet type="text/css" href="zzl.css" title="lstyle">
+<body bgcolor="#cccc99"><center><table summary="Menu" width=85% border=0 cellspacing=0 cellpadding=2>
+<tr>
+<th rowspan=3 bgcolor="ddaaaa"><a href="../index-2.html">Philosophy Pages</a><br><br><a target="new" href="http://www.britannica.com/"><img src="../vy/briguide.gif"></a>
+<th>&nbsp;
+<th bgcolor="ffffcc">&nbsp;&nbsp;<a href="../dy/index.html">Dictionary</a>&nbsp;&nbsp;
+<th bgcolor="ffffff"><a href="../sy.html">&nbsp;Study Guide&nbsp;</a>
+<th bgcolor="cccc99"><a href="index.html">Logic</a>
+<th>&nbsp;
+<th bgcolor="ffffff"><a href="../faq.html">F A Q s</a>
+<tr>
+<th>&nbsp;
+<th bgcolor="eeeeee"><a href="../hy/index.html">History</a>
+<th bgcolor="ccffcc"><a href="../dy/zt.html">Timeline</a>
+<th bgcolor="cccccc"><a href="../ph/index.html">Philosophers</a>
+<th>&nbsp;
+<th bgcolor="99ccff"><a href="../locke/index.html">Locke</a>
+<tr><th>&nbsp;
+</table>
+</center>
+<div><br>
+
+<h3>Rules of Inference</h3>
+
+<h4><a name="proof">The Method of Proof</a></h4>
+<p>The construction of truth-tables provides a reliable method of <a href="e10b.html#val">evaluating the validity</a> of arguments in the propositional calculus. We can always tabulate the truth-values of premises and conclusion, checking for a line on which the premises are true while the conclusion is false.
+Although this method always works, however, it isn't always convenient, since the appropriate truth-table must have 2<sup>n</sup> lines, where n is the number of statement variables involved.
+Thus, an argument with six different simple statements would require the construction of a truth-table with 64 lines.
+<p>Fortunately, there is another, shorter way to proceed, by constructing a formal
+<a href="../dy/p9.html#proof">proof</a> of the validity of an argument.
+The basic notion underlying this new method is that since a chain of interrelated arguments is valid so long as each of its links is valid, we can demonstrate the validity of an argument by starting with its premises, taking one tiny valid step at a time, and finally reaching its conclusion.
+The only limitations we need to impose on this procedure are that each of our tiny steps must be a substitution-instance of some valid argument form and that we can discover a seamless path leading from premises to conclusion.
+<p>Although any valid pattern of inferences could be used in this proof procedure, we will make things easier by relying on a very short list of valid argument forms.
+Each new step that we take in constructing a proof must then be a substitution-instance of one of these <a href="../dy/i9.html#inru">rules of inference</a>.
+You've <a href="e10b.html#val">already seen</a> four of them:
+<pre>
+       M.P.           M.T.           H.S.          D.S.
+
+     p &sup; q          p &sup; q         p &sup; q          p &or; q
+
+     p              ~ q            q &sup; r          ~ p
+     _______        _______        _______        _____
+
+     q              ~ p            p &sup; r          q
+</pre>
+We'll add just five more, making a total of nine elementary valid argument forms to be used as rules of inference.<br><br>
+
+<h4><a name="cd">Constructive Dilemma</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><td><td><td><td><td align=center>1st Premise<td>2nd Prem.<td>Conc.
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>&nbsp;r&nbsp;<th>&nbsp;s&nbsp;<th>(p<tt>&sup;</tt>q)&bull;(r<tt>&sup;<tt>s)<th> p<tt> &or; </tt>r <th> q<tt> &or; </tt>s 
+<tr><th>T<th>T<th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>T<th>T<th>F<th>F<th>T<th>T
+<tr><th>T<th>T<th>F<th>T<th>T<th>T<th>T
+<tr><th>T<th>T<th>F<th>F<th>T<th>T<th>T
+<tr><th>T<th>F<th>T<th>T<th>F<th>T<th>T
+<tr><th>T<th>F<th>T<th>F<th>F<th>T<th>F
+<tr><th>T<th>F<th>F<th>T<th>F<th>T<th>T
+<tr><th>T<th>F<th>F<th>F<th>F<th>T<th>F
+<tr><th>F<th>T<th>T<th>T<th>T<th>T<th>T
+<tr><th>F<th>T<th>T<th>F<th>F<th>T<th>T
+<tr><th>F<th>T<th>F<th>T<th>T<th>F<th>T
+<tr><th>F<th>T<th>F<th>F<th>T<th>F<th>T
+<tr><th>F<th>F<th>T<th>T<th>T<th>T<th>T
+<tr><th>F<th>F<th>T<th>F<th>F<th>T<th>F
+<tr><th>F<th>F<th>F<th>T<th>T<th>F<th>T
+<tr><th>F<th>F<th>F<th>F<th>T<th>F<th>F
+</table>
+<p>The most complex of our rules of inference is <a href="../dy/c7.html#cd">Constructive Dilemma</a> (abbreviated as C.D.).
+Since it involves four statement variables, the truth-table that shows its validity must take into account sixteen different combinations of truth-values.<br><br>
+The argument form of a constructive dilemma is:
+<pre>
+  (p &sup; q) &bull; (r &sup; s)
+
+  p &or; r
+  _____________________
+
+  q &or; s
+</pre> 
+The premises are true on lines 1, 3, 4, 9, and 13, and on each of these lines the conclusion is also true.
+Thus, the inference is valid, and we can be sure that every argument that is a substitution-instance of this argument form must be valid.
+<br clear=all><br>
+
+<h4><a name="abs">Absorption</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><td> <td> <td>Premise<td>Conclusion
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>p<tt>&sup;</tt>q<th>p<tt>&sup;</tt>(p&bull;q)
+<tr><th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th>F
+<tr><th>F<th>T<th>T<th>T
+<tr><th>F<th>F<th>T<th>T
+</table>
+<p><a href="../dy/a.html#abs">Absorption</a> (Abs.) has the simpler form:
+<pre>
+	p &sup; q
+	_____________
+
+	p &sup; (p &bull; q)
+</pre> 
+The truth-table at the right shows the validity of all substitution-instances of this argument form. Whenever its premise is true, the conclusion is true as well. (In fact, you may notice that, in this unusual instance, it is also true that the premise is true whenever the conclusion is. The two statement forms are logically equivalent to each other.)
+<br clear=all><br>
+
+<h4><a name="simp">Simplification</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><td> <td> <td>Premise<td>Conclusion
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th> p &bull; q <th> p 
+<tr><th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th>T
+<tr><th>F<th>T<th>F<th>F
+<tr><th>F<th>F<th>F<th>F
+</table>
+<p>The <a href="../dy/s5.html#simp">Simplification</a> (Simp.) rule permits us to infer the truth of a conjunct from that of a conjunction.
+<pre>
+	p &bull; q
+	_____
+
+	p 
+</pre> 
+Its truth-table is at right. Notice that Simp. warrants only an inference to the first of the two conjuncts, even though the truth of the second conjunct could be also be derived.<br clear=all><br>
+
+<h4><a name="conj">Conjunction</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><td>1st Premise<td>2nd Premise<td>Conclusion
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th> p &bull; q 
+<tr><th>T<th>T<th>T
+<tr><th>T<th>F<th>F
+<tr><th>F<th>T<th>F
+<tr><th>F<th>F<th>F
+</table>
+<p>On the other hand, <a href="../dy/c7.html#conj">Conjunction</a> (Conj.) permits the derivation of a conjunction from the truth of both of its conjuncts.
+<pre>
+	p
+
+	q
+	_____
+
+	p &bull; q
+</pre> 
+As the truth-table at the right illustrates, this is a natural inference from our definition of the connective. <br clear=all>
+
+<h4><a name="add">Addition</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><td> <td> <td>Premise<td>Conclusion
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th> p <th> p<tt> &or; </tt>q 
+<tr><th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>T<th>T
+<tr><th>F<th>T<th>F<th>T
+<tr><th>F<th>F<th>F<th>F
+</table>
+<p>Finally, <a href="../dy/a.html#add">Addition</a> (Add.) is the argument form:
+<pre>
+	p 
+	_____
+
+	p &or; q
+</pre> 
+This rule warrants the inference from any true statement to its disjunction with anything whatsoever. This is an amazingly powerful device, since it permits us to introduce any new statement whatsoever into the context of a proof. Our challenge in applying it will lie in discovering an appropriate or helpful substitution for <tt>&nbsp;q&nbsp;</tt> in each specific case.
+<br clear=all><br>
+
+<h4><a name="justi">Constructing</a> a <a name="construct">Proof</a></h4>
+<p>Now let's see how to use these nine rules of inference in order to demonstrate the validity of arguments in the propositional calculus.
+Consider, for example, the argument:
+<pre>
+		A &sup; (B &or; ~C)
+
+		D &sup; C
+
+		A
+
+		~B
+		______________
+
+		~D
+</pre>
+In order to construct a formal proof of the validity of this argument, we begin by numbering each of its premises and indicating that we are assuming their truth as the premises of an argument:
+<pre>
+		1. A &sup; (B &or; ~C)	 premise	
+		2. D &sup; C		premise
+		3. A			premise
+		4. ~B			premise
+</pre>
+Next, we notice that premise 1 has the form <tt>p&sup;q</tt> and that premise 3 is the antecedent of that conditional.
+That is, premises 1 and 3, taken together, are the premises of an argument that is a substitution-instance of the valid argument form known as <i>Modus Ponens</i>.
+The conclusion of that argument would be the consequent of the conditional, or <tt>B &or; ~C</tt>.
+Thus, we can take the tiny step of adding this conclusion to our list of established statements, indicating at the right a simple
+<a href="../dy/j.html#justi">justification</a> that explains exactly where it came from, by listing the previous statements used as premises of an argument that follows one of the rules of inference.
+<pre>
+		1. A &sup; (B &or; ~C)		premise	
+		2. D &sup; C		premise
+		3. A			premise
+		4. ~B			premise
+		5. B &or; ~C		1, 3 M.P.
+</pre>
+In the same way, we can now use this new statement, together with statement 4, as the premises of a substitution-instance of D.S., which justifies the further conclusion ~C.
+<pre>
+		1. A &sup; (B &or; ~C)		premise	
+		2. D &sup; C		premise
+		3. A			premise
+		4. ~B			premise
+		5. B &or; ~C		1, 3 M.P.
+		6. ~C			5, 4 D.S.
+</pre>
+Finally, this new statement and statement 2 are the premises of a substitution instance of M.T.
+which justifies the conclusion ~D.
+<pre>
+		1. A &sup; (B &or; ~C)		premise	
+		2. D &sup; C		premise
+		3. A			premise
+		4. ~B			premise
+		5. B &or; ~C		1, 3 M.P.
+		6. ~C			5, 4 D.S.
+		7. ~D			2, 6 M.T.
+</pre>
+But this was the conclusion of the original argument, so by proceeding step by valid step, we have shown that if the premises of that original argument (1-4) are true, then its conclusion (7) must also be true.
+Since each step in our proof relies only upon a rule of inference and the supposed truth of earlier statements, the entire chain of reasoning must be valid.
+<br><br><br>
+
+<font size=-1>
+<p><center> <hr title="-"><a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="../../licensebuttons.net/l/by-sa/3.0/88x31.png" /></a><br><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type"><em>The Philosophy Pages</em></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="../index.html" property="cc:attributionName" rel="cc:attributionURL">Garth Kemerling</a> are licensed under a <a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br>Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="../referral/contact.html" rel="cc:morePermissions">http://www.philosophypages.com/referral/contact.htm</a>.
+<br><br>&copy;1997, 2011 Garth Kemerling.<br>Last modified 12 November 2011.<br>
+Questions, comments, and suggestions may be sent to:<br><a
+href="../referral/contact.html">the Contact Page.</a></center></font>
+
+</div></body>
+
+<!-- Mirrored from www.philosophypages.com/lg/e11a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+</html>
+

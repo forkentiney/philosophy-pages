@@ -1,0 +1,10 @@
+body {background: url(../vy/aaj.jpg); margin-left: 25px; width: 660px; font-family: times new roman, serif; text-align: justify}
+a:link {color: #0000cc}
+a:visited {color: #cc0000}
+a:active {color: #006600}
+h1, h2, h3, h5 {text-align: center}
+h4 {margin-left: -10px; width: 350px}
+h5 {font-weight: normal}
+p {text-indent: 2em}
+pre, tt {font-family: courier, monospace}
+a {text-decoration: none}

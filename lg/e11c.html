@@ -1,0 +1,259 @@
+<html lang=en>
+
+<!-- Mirrored from www.philosophypages.com/lg/e11c.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+<head>
+<link rel="shortcut icon" href="../vy/logic.ico">
+
+<meta name="keywords" content="philosophy, logic, symbolic, statement, proof, proving, proof procedure, proof construction">
+<meta name="description" content="An explanation of the basic elements of elementary logic.">
+<meta name="author" content="Garth Kemerling">
+<title>Proving Validity and Invalidity</title>
+<link rel=stylesheet type="text/css" href="zzl.css" title="lstyle">
+<body bgcolor="#cccc99"><center><table summary="Menu" width=85% border=0 cellspacing=0 cellpadding=2>
+<tr>
+<th rowspan=3 bgcolor="ddaaaa"><a href="../index-2.html">Philosophy Pages</a><br><br><a target="new" href="http://www.britannica.com/"><img src="../vy/briguide.gif"></a>
+<th>&nbsp;
+<th bgcolor="ffffcc">&nbsp;&nbsp;<a href="../dy/index.html">Dictionary</a>&nbsp;&nbsp;
+<th bgcolor="ffffff"><a href="../sy.html">&nbsp;Study Guide&nbsp;</a>
+<th bgcolor="cccc99"><a href="index.html">Logic</a>
+<th>&nbsp;
+<th bgcolor="ffffff"><a href="../faq.html">F A Q s</a>
+<tr>
+<th>&nbsp;
+<th bgcolor="eeeeee"><a href="../hy/index.html">History</a>
+<th bgcolor="ccffcc"><a href="../dy/zt.html">Timeline</a>
+<th bgcolor="cccccc"><a href="../ph/index.html">Philosophers</a>
+<th>&nbsp;
+<th bgcolor="99ccff"><a href="../locke/index.html">Locke</a>
+<tr><th>&nbsp;
+</table>
+</center>
+<div><br>
+
+<h3>Proof-Procedures for Propositional Logic</h3>
+
+<h4><a name="proof">Inventing Proofs</a></h4>
+<p>Taken together, the nine rules of inference and ten rules of replacement are a
+<a href="../dy/c5.html#cplt">complete</a> set in the sense that using just these nineteen rules is sufficient to demonstrate the validity of every valid argument of the propositional calculus.
+(In fact, there is a good deal of redundancy built into the system: if we happened to forget about M.P. entirely, for example, we could always work around it by using Impl., D.N., D.S., and Impl. again.)
+What's more, showing the validity of an argument in this way is often more convenient than building the huge truth-table required to cover every possible combination of truth-values.
+<p>But constructing proofs isn't always easy, as you've discovered in your last couple of exercise sets.
+Even if you know the rules inside-out, upside-down, and backwards-and-forwards (as you must) and even if you are skilled at recognizing the intermediate arguments that are their substitution instances in the context of a proof (as you should be), inventing a proof on your own may seem a daunting task.
+But don't be discouraged.
+No matter how long and complex a proof becomes, each of its steps is always just the application of one of our nineteen rules; we just have to figure out which ones lead us from premises to conclusion.
+There's nothing magical about the process. No one simply "sees" the whole proof at the outset, although some people may move a little faster than others. With practice, anyone can learn to perform the necessary steps.
+<p>Let's look at one more instance together:
+<br><br>
+
+<h4><a name="hints">A Detailed Example</a></h4>
+<p>Consider the following argument:
+<pre>
+		A &bull; (B &bull; C)
+
+		(B &bull; A) &sup; [D &or; (~E &equiv; F)]
+
+		~D &bull; ~(G &or; E)
+		___________________________
+
+		~(G &or; ~F)
+</pre>
+The first step, as always is to number and label the premises of the argument as the starting-point for our proof:
+<pre>
+		 1. A &bull; (B &bull; C)				premise
+		 2. (B &bull; A) &sup; [D &or; (~E &equiv; F)]	  	premise
+		 3. ~D &bull; ~(G &or; E)			premise
+</pre>
+Now, begin working from the top down.
+Notice that the first premise is a conjunction whose right conjunct is itself another conjunction.
+We have several possibilities here, since this statement could be a substitution instance of statement forms that occur in several of our rules:
+Simp. and Comm. can be applied to any conjunction, and Assoc. will work on one of this form, too.
+
+<p>Which one should we use? Well, let's think ahead a bit.
+Premise 2 is a conditional statement, and we know that if its antecedent were on a line by itself, then that line together with premise 2 would be a substitution-instance of the premises required for an application of M.P.
+That is (leaving lots of room for the work we may have to do in between) we would like to be able to build the proof like this:
+<pre>
+		 1. A &bull; (B &bull; C)				premise
+		 2. (B &bull; A) &sup; [D &or; (~E &equiv; F)]		premise
+		 3. ~D &bull; ~(G &or; E)			premise
+
+
+
+		    B &bull; A				? ? ?
+		    D &or; (~E &equiv; F)			2, ? M.P.
+</pre>
+But in order to make this work, we have to derive <tt>B &bull; A</tt>.
+Looking back at the first premise now, we notice that an application of Assoc.
+would change the grouping in such a way as to get <tt>A</tt> and <tt>B</tt> together, from which we could then simplify to have them on a line of their own:
+<pre>
+		 1. A &bull; (B &bull; C)				premise
+		 2. (B &bull; A) &sup; [D &or; (~E &equiv; F)]		premise
+		 3. ~D &bull; ~(G &or; E)			premise
+		 4. (A &bull; B) &bull; C				1 Assoc.
+		 5. A &bull; B				4 Simp.
+
+
+		    B &bull; A				? ? ?
+		    D &or; (~E &equiv; F)			2, ? M.P.
+</pre>
+But now it's pretty obvious that all we have to do is commute line 5 to get the missing premise for our M.P.:
+<pre>
+		 1. A &bull; (B &bull; C)				premise
+		 2. (B &bull; A) &sup; [D &or; (~E &equiv; F)]		premise
+		 3. ~D &bull; ~(G &or; E)			premise
+		 4. (A &bull; B) &bull; C				1 Assoc.
+		 5. A &bull; B				4 Simp.
+		 6. B &bull; A				5 Comm.
+		 7. D &or; (~E &equiv; F)			2, 6 M.P.
+</pre>
+This new line is a disjunction, so it would serve as one of the premises of a disjunctive syllogism if we only had <tt>~D</tt>.
+But we can get that easily enough by simplifying our third premise:
+<pre>
+		 1. A &bull; (B &bull; C)				premise
+		 2. (B &bull; A) &sup; [D &or; (~E &equiv; F)]		premise
+		 3. ~D &bull; ~(G &or; E)			premise
+		 4. (A &bull; B) &bull; C				1 Assoc.
+		 5. A &bull; B				4 Simp.
+		 6. B &bull; A				5 Comm.
+		 7. D &or; (~E &equiv; F)			2, 6 M.P.
+		 8. ~D					3 Simp.
+		 9. ~E &equiv; F				7, 8 D.S.
+</pre>
+Suppose that at this point, we've run out of ideas about what to do working from the top down.
+So let's work from the bottom up instead&#0151;remember the conclusion we're trying to establish here:
+<pre>
+		~(G &or; ~F)
+</pre>
+Since this conclusion is the negation of a disjunction, we naturally think of De Morgan's Theorems, which state its equivalence to a conjunction of negations.
+And of course, we can form a conjunction by deriving both conjuncts on their own and then using Conj.
+So we're now guessing that the end of our argument will look something like this:
+<pre>
+		 1. A &bull; (B &bull; C)				premise
+		 2. (B &bull; A) &sup; [D &or; (~E &equiv; F)]		premise
+		 3. ~D &bull; ~(G &or; E)			premise
+		 4. (A &bull; B) &bull; C				1 Assoc.
+		 5. A &bull; B				4 Simp.
+		 6. B &bull; A				5 Comm.
+		 7. D &or; (~E &equiv; F)			2, 6 M.P.
+		 8. ~D					3 Simp.
+		 9. ~E &equiv; F				7, 8 D.S.
+
+
+
+		    ~G					? ? ?
+
+
+		    ~~F					? ? ?
+		    ~G &bull; ~~F				?, ? Conj.
+		    ~(G &or; ~F)				? DeM.
+</pre>
+All we need to do now is to close the gap between the top part of the proof and the ending that would provide our desired conclusion.
+So, in effect, we're starting all over: we now have lines 1-9 available as premises, and we need to invent two little proofs, one with the conclusion <tt>~G</tt> and the other with the conclusion <tt>~~F</tt>.
+
+<p>For the first of these, we need to go back up to line 3, since that's the only place where <tt>G</tt> occurs.
+If we commute that line and then simplify, we'll have:
+<pre>
+		 1. A &bull; (B &bull; C)				premise
+		 2. (B &bull; A) &sup; [D &or; (~E &equiv; F)]		premise
+		 3. ~D &bull; ~(G &or; E)			premise
+		 4. (A &bull; B) &bull; C				1 Assoc.
+		 5. A &bull; B				4 Simp.
+		 6. B &bull; A				5 Comm.
+		 7. D &or; (~E &equiv; F)			2, 6 M.P.
+		 8. ~D					3 Simp.
+		 9. ~E &equiv; F				7, 8 D.S.
+		10. ~(G &or; E) &bull; ~D			3 Comm.
+		11. ~(G &or; E)				10 Simp.
+
+
+		    ~G					? ? ?
+
+
+		    ~~F					? ? ?
+		    ~G &bull; ~~F				?, ? Conj.
+		    ~(G &or; ~F)				? DeM.
+</pre>
+Now applying De Morgan's Theorems and simplifying will complete the first of our little arguments:
+<pre>
+		 1. A &bull; (B &bull; C)				premise
+		 2. (B &bull; A) &sup; [D &or; (~E &equiv; F)]		premise
+		 3. ~D &bull; ~(G &or; E)			premise
+		 4. (A &bull; B) &bull; C				1 Assoc.
+		 5. A &bull; B				4 Simp.
+		 6. B &bull; A				5 Comm.
+		 7. D &or; (~E &equiv; F)			2, 6 M.P.
+		 8. ~D					3 Simp.
+		 9. ~E &equiv; F				7, 8 D.S.
+		10. ~(G &or; E) &bull; ~D			3 Comm.
+		11. ~(G &or; E)				10 Simp.
+		12. ~G &bull; ~E				11 DeM.
+		13. ~G					12 Simp.
+
+
+		    ~~F					? ? ?
+		    ~G &bull; ~~F				?, ? Conj.
+		    ~(G &or; ~F)				? DeM.
+</pre>
+Now our only goal is to derive <tt>~~F</tt>, and that is likely to come from line 9, which is the simplest line in which <tt>F</tt> occurs.
+So let's use Equiv.
+to unpack line 9 and simplify the result:
+<pre>
+		 1. A &bull; (B &bull; C)				premise
+		 2. (B &bull; A) &sup; [D &or; (~E &equiv; F)]		premise
+		 3. ~D &bull; ~(G &or; E)			premise
+		 4. (A &bull; B) &bull; C				1 Assoc.
+		 5. A &bull; B				4 Simp.
+		 6. B &bull; A				5 Comm.
+		 7. D &or; (~E &equiv; F)			2, 6 M.P.
+		 8. ~D					3 Simp.
+		 9. ~E &equiv; F				7, 8 D.S.
+		10. ~(G &or; E) &bull; ~D			3 Comm.
+		11. ~(G &or; E)				10 Simp.
+		12. ~G &bull; ~E				11 DeM.
+		13. ~G					12 Simp.
+		14. (~E &sup; F) &bull; (F &sup; ~E)			9 Equiv.
+		15. ~E &sup; F				14 Simp.
+
+
+		    ~~F					? ? ?
+		    ~G &bull; ~~F				?, ? Conj.
+		    ~(G &or; ~F)				? DeM.
+</pre>
+But now we're almost done: a little fiddling with line 12 will get us <tt>~E</tt>, the other premise we need for an M.P. on line 15, and D.N.
+will fill the gap completely, so we need only supply the missing line numbers in order to complete the entire proof: 
+<pre>
+		 1. A &bull; (B &bull; C)				premise
+		 2. (B &bull; A) &sup; [D &or; (~E &equiv; F)]		premise
+		 3. ~D &bull; ~(G &or; E)			premise
+		 4. (A &bull; B) &bull; C				1 Assoc.
+		 5. A &bull; B				4 Simp.
+		 6. B &bull; A				5 Comm.
+		 7. D &or; (~E &equiv; F)			2, 6 M.P.
+		 8. ~D					3 Simp.
+		 9. ~E &equiv; F				7, 8 D.S.
+		10. ~(G &or; E) &bull; ~D			3 Comm.
+		11. ~(G &or; E)				10 Simp.
+		12. ~G &bull; ~E				11 DeM.
+		13. ~G					12 Simp.
+		14. (~E &sup; F) &bull; (F &sup; ~E)			9 Equiv.
+		15. ~E &sup; F				14 Simp.
+		16. ~E &bull; ~G				12 Comm.
+		17. ~E					16 Simp.
+		18. F					15, 17 M.P.
+		19. ~~F					18 D.N.
+		20. ~G &bull; ~~F				13, 19 Conj.
+		21. ~(G &or; ~F)				20 DeM.
+</pre>
+Although this turned out to be a very long proof, it wasn't really difficult, since each of the shorter segments in which we invented it involved only a few simple steps.
+We simply worked from the top down and from the bottom up until we closed the gap step by step in order to demonstrate the validity of the original argument.
+<br><br><br>
+
+<font size=-1>
+<p><center> <hr title="-"><a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="../../licensebuttons.net/l/by-sa/3.0/88x31.png" /></a><br><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type"><em>The Philosophy Pages</em></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="../index.html" property="cc:attributionName" rel="cc:attributionURL">Garth Kemerling</a> are licensed under a <a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br>Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="../referral/contact.html" rel="cc:morePermissions">http://www.philosophypages.com/referral/contact.htm</a>.
+<br><br>&copy;1997, 2011 Garth Kemerling.<br>Last modified 12 November 2011.<br>
+Questions, comments, and suggestions may be sent to:<br><a
+href="../referral/contact.html">the Contact Page.</a></center></font>
+
+</div></body>
+
+<!-- Mirrored from www.philosophypages.com/lg/e11c.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+</html>

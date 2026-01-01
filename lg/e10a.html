@@ -1,0 +1,170 @@
+<html lang=en>
+
+<!-- Mirrored from www.philosophypages.com/lg/e10a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+<head>
+<link rel="shortcut icon" href="../vy/logic.ico">
+
+<meta name="keywords" content="philosophy, logic, symbolic, statement, negation, conjunction, disjunction, implication, equivalence">
+<meta name="description" content="An explanation of the basic elements of elementary logic.">
+<meta name="author" content="Garth Kemerling">
+<title>Logical Symbols</title>
+<link rel=stylesheet type="text/css" href="zzl.css" title="lstyle">
+<body bgcolor="#cccc99"><center><table summary="Menu" width=85% border=0 cellspacing=0 cellpadding=2>
+<tr>
+<th rowspan=3 bgcolor="ddaaaa"><a href="../index-2.html">Philosophy Pages</a><br><br><a target="new" href="http://www.britannica.com/"><img src="../vy/briguide.gif"></a>
+<th>&nbsp;
+<th bgcolor="ffffcc">&nbsp;&nbsp;<a href="../dy/index.html">Dictionary</a>&nbsp;&nbsp;
+<th bgcolor="ffffff"><a href="../sy.html">&nbsp;Study Guide&nbsp;</a>
+<th bgcolor="cccc99"><a href="index.html">Logic</a>
+<th>&nbsp;
+<th bgcolor="ffffff"><a href="../faq.html">F A Q s</a>
+<tr>
+<th>&nbsp;
+<th bgcolor="eeeeee"><a href="../hy/index.html">History</a>
+<th bgcolor="ccffcc"><a href="../dy/zt.html">Timeline</a>
+<th bgcolor="cccccc"><a href="../ph/index.html">Philosophers</a>
+<th>&nbsp;
+<th bgcolor="99ccff"><a href="../locke/index.html">Locke</a>
+<tr><th>&nbsp;
+</table>
+</center>
+<div><br>
+
+<h3>Logical Symbols</h3>
+
+<p>Although traditional categorical logic can be used to represent and assess many of our most common patterns of reasoning, modern logicians have developed much more comprehensive and powerful systems for expressing rational thought.
+These newer logical languages are often called "symbolic logic," since they employ special symbols to represent clearly even highly complex logical relationships.
+We'll begin our study of symbolic logic with the <a href="../dy/p9.html#proca">propositional calculus</a>, a formal system that effectively captures the ways in which individual statements can be combined with each other in interesting ways.
+The first step, of course, is to define precisely all of the special, new symbols we will use.<br><br> 
+
+
+<h4><a name="cmpds">Compound Statements</a></h4>
+<p>The propositional calculus is not concerned with any features within a simple proposition.
+Its most basic units are whole <a href="../dy/p9.html#prop">propositions</a> or statements, each of which is either true or false (though, of course, we don't always know which).
+In ordinary language, we convey statements by complete declarative sentences, such as "Alan bears an uncanny resemblance to Jonathan," "Betty enjoys watching John cook," or "Chris and Lloyd are an unbeatable team."
+But when we're thinking about the logical relationships that hold among two or three or more such statements, it would be awfully clumsy to write out the entire sentence at every occurrence of each of them.
+Instead, we represent specific individual statements by using capital letters of the alphabet as <a href="../dy/s9.html#stco">statement constants</a>.
+Thus, for example, we could use <tt>&nbsp;A&nbsp;</tt>, <tt>&nbsp;B&nbsp;</tt>, and <tt>&nbsp;C&nbsp;</tt> to represent the statements mentioned above&#0151;letting <tt>&nbsp;A&nbsp;</tt> stand for "Alan bears an uncanny resemblance to Jonathan," <tt>&nbsp;B&nbsp;</tt> stand for "Betty enjoys watching John cook," and <tt>&nbsp;C&nbsp;</tt> stand for "Chris and Lloyd are an unbeatable team."
+Within the context of this discussion, each statement constant designates one and only one statement.
+<p>When we want to deal with statements more generally, we will use lower-case letters of the alphabet (beginning with "p") as <a href="../dy/s9.html#stva">statement variables</a>.
+Thus, for example, we might say, "Consider any statement, <tt>&nbsp;p&nbsp;</tt>,&nbsp;.&nbsp;.&nbsp;." or "Suppose that some pair of statements, <tt>&nbsp;p&nbsp;</tt> and <tt>&nbsp;q&nbsp;</tt>, are both true&nbsp;.&nbsp;.&nbsp;.&nbsp;."
+Statement variables can stand for any statements whatsoever, but within the scope of a specific context, each statement variable always designates the same statement.
+Once we've begun substituting <tt>&nbsp;A&nbsp;</tt> for <tt>&nbsp;p&nbsp;</tt>, we must do so consistently; that is, every occurrence of <tt>&nbsp;p&nbsp;</tt> must be taken to refer to <tt>&nbsp;A&nbsp;</tt>.
+But if another variable, <tt>&nbsp;q&nbsp;</tt>, occurs in the same context, it can stand for any statement whatsoever&#0151;<tt>&nbsp;B&nbsp;</tt>, or <tt>&nbsp;C&nbsp;</tt>, or even <tt>&nbsp;A&nbsp;</tt>.
+<p>Next we introduce five special symbols, the <a href="../dy/c7.html#conn">statement connectives</a> or operators:<br><br>
+<b><tt>&nbsp;&nbsp;&nbsp;&nbsp;~&nbsp;</tt></b><br>
+<b><tt>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;</tt></b>&nbsp;&nbsp;&nbsp;<br>
+<b><tt>&nbsp;&nbsp;&nbsp;&nbsp;&or;&nbsp;</tt></b><br>
+<b><tt>&nbsp;&nbsp;&nbsp;&nbsp;&sup;&nbsp;</tt></b>&nbsp;&nbsp;&nbsp;<br>
+<b><tt>&nbsp;&nbsp;&nbsp;&nbsp;&equiv;&nbsp;</tt></b>&nbsp;&nbsp; <br><br>
+The syntax of using statement connectives to form new, compound statements can be stated as a simple rule:<br><br>
+For any statements, <tt>&nbsp;p&nbsp;</tt> and <tt>&nbsp;q&nbsp;</tt>,<br>
+<pre>      <tt>&nbsp;~ p&nbsp;</tt><br>
+     <tt>&nbsp;p &bull; q&nbsp;</tt><br>
+     <tt>&nbsp;p &or; q&nbsp;</tt><br>
+     <tt>&nbsp;p &sup; q&nbsp;</tt>     and<br>
+     <tt>&nbsp;p &equiv; q&nbsp;</tt><br></pre>
+are all legitimate compound statements.<br><br>
+This rule is <a href="../dy/r.html#recu">recursive</a> in the sense that it can be applied to its own results in order to form compounds of compounds of compounds&nbsp;.&nbsp;.&nbsp;. , etc.
+As these compound statements become more complex, we'll use parentheses and brackets, just as we do in algebra, in order to keep track of the order of operations.
+Thus, since <tt>&nbsp;A&nbsp;</tt>, <tt>&nbsp;B&nbsp;</tt>, and <tt>&nbsp;C&nbsp;</tt> are all statements, so are all of the following compound statements:<br>
+<tt>&nbsp;~ A&nbsp;</tt><br>
+<tt>&nbsp;A &bull; B&nbsp;</tt><br>
+<tt>&nbsp;A &or; ~ C&nbsp;</tt><br>
+<tt>&nbsp;C &sup; (B &or; A)&nbsp;</tt><br>
+<tt>&nbsp;~ (~ B &equiv; C)&nbsp;</tt><br>
+<tt>&nbsp;(A &or; ~B) &equiv; (C &sup; A)&nbsp;</tt><br>
+<tt>&nbsp;[A &or; ~ (C &or; B)]&nbsp;</tt><br><br>
+<p>But what do these special symbols mean? What relationship between individual statements do their compound statements express?
+Although each of them roughly corresponds to some fairly common English expression, it is important to notice that we define each in precise logical terms.
+The five logical operators are all <a href="../dy/t9.html#truf">truth-functional</a> connectives;
+the truth or falsity of each compound statement formed by using them is wholly determined by the truth-value of the component statements and the meaning of the connective.
+Thus, using statement variables in order to cover every possible combination of truth-values (<b>T</b> or <b>F</b>), we can develop a convenient
+<a href="../dy/t9.html#trutb">truth-table</a> to define the meaning of each statement connective.<br><br>
+
+<h4><a name="neg">Negation</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;<tt>~ </tt>p&nbsp;
+<tr><th>T<th>F
+<tr><th>F<th>T
+</table>
+<p>The "<tt>&nbsp;~&nbsp;</tt>" signifies logical <a href="../dy/n.html#neg">negation</a>; it simply reverses the truth value of any statement (simple or compound) in front of which it appears:
+if the original is true, the <tt>&nbsp;~&nbsp;</tt>statement is false, and if the original is false, the <tt>&nbsp;~&nbsp;</tt>statement is true.
+Thus, its meaning can be represented by the truth-table at right.
+<p>The English expression "It is not the case that&nbsp;.&nbsp;.&nbsp;." serves the same function, though of course we have many other methods of negating an assertion in ordinary language&#0151;sometimes the single word "not" embedded in a sentence is enough to do the job.<br clear=all><br>
+
+<h4><a name="cnj">Conjunction</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>&nbsp;p &bull; q&nbsp;
+<tr><th>T<th>T<th>T
+<tr><th>T<th>F<th>F
+<tr><th>F<th>T<th>F
+<tr><th>F<th>F<th>F
+</table>
+<p>The "<tt>&nbsp;&bull;&nbsp;</tt>" symbolizes logical <a href="../dy/c7.html#cnj">conjunction</a>;
+a compound statement formed with this connective is true only if both of the component statements between which it occurs are true. Whenever either of the conjuncts (or both) is false, the whole conjunction is false.
+Thus, the truth-table at right shows the truth-value of a compound <tt>&nbsp;&bull;&nbsp;</tt>statement for every possible combination of truth-values for its components.
+<p>In ordinary English, grammatical conjunctions such as "and" and "but" generally have the same semantic function.<br clear=all><br>
+
+<h4><a name="disj">Disjunction</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>&nbsp;p<tt> &or; </tt>q&nbsp;
+<tr><th>T<th>T<th>T
+<tr><th>T<th>F<th>T
+<tr><th>F<th>T<th>T
+<tr><th>F<th>F<th>F
+</table>
+<p>The symbol "<tt>&nbsp;&or;&nbsp;</tt>" signifies inclusive <a href="../dy/d9.html#disj">disjunction</a>:
+a <tt>&nbsp;&or;&nbsp;</tt>statement is true whenever either (or both) of its component statements is true; it is false only when both of them are false.
+(See the truth-table at right.)
+<p>Although this roughly corresponds to the English expression "Either&nbsp;.&nbsp;.&nbsp;. or&nbsp;.&nbsp;.&nbsp;. ," notice that in ordinary usage we often exclude the possibility that both of the disjuncts are true&#0151;"Either he is here or he is not" doesn't leave open the chance that he is both here and not here.
+Remember that our logical symbol, <tt>&nbsp;&or;&nbsp;</tt>, is always inclusive by its truth-table definition. If we want to express the more limited sense conveyed by the English expression, we'll have to use a statement of the form "<tt>&nbsp;(p &or; q) &bull; ~(p &bull; q)&nbsp;</tt>."<br clear=all><br>
+
+<h4><a name="impn">Implication</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>&nbsp;p<tt> &sup; </tt>q&nbsp;
+<tr><th>T<th>T<th>T
+<tr><th>T<th>F<th>F
+<tr><th>F<th>T<th>T
+<tr><th>F<th>F<th>T
+</table>
+<p>The <tt>&nbsp;&sup;&nbsp;</tt> symbol is used to symbolize a relationship called <a href="../dy/i.html#impn">material implication</a>;
+a compound statement formed with this connective is true unless the component on the left (the <b>antecedent</b>) is true and the component on the right (the <b>consequent</b>) is false, as shown in the truth-table at the right.
+<p>In this case, there is a reliable correspondence with the <a href="../dy/c7.html#cdtl">conditional statements</a> that are commonly expressed in the English expression "If&nbsp;.&nbsp;.&nbsp;. , then&nbsp;.&nbsp;.&nbsp;.&nbsp;." 
+Although conditionals have many other uses in ordinary language (to assert the presence of a causal connection, for example), virtually all of them exemplify the basic sense of material implication symbolized by the <tt>&nbsp;&sup;&nbsp;</tt>.
+<br clear=all><br>
+
+<h4><a name="equv">Equivalence</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>&nbsp;p<tt> &equiv; </tt>q&nbsp;
+<tr><th>T<th>T<th>T
+<tr><th>T<th>F<th>F
+<tr><th>F<th>T<th>F
+<tr><th>F<th>F<th>T
+</table>
+<p>Finally, the <tt>&nbsp;&equiv;&nbsp;</tt> is used to symbolize <a href="../dy/e5.html#equv">material equivalence</a>,
+in which the compound statement is true only when its component statements have the same truth-value&#0151;either both are true or both are false.
+(See the truth-table at right.)
+<p>This corresponds to a minimal interpretation of the <a href="../dy/b2.html#bico">biconditional statements</a> commonly expressed in English with the connective phrase "&nbsp;.&nbsp;.&nbsp;. if and only if&nbsp;.&nbsp;.&nbsp;.&nbsp;." <br clear=all><br>
+
+<p>In compound statements formed with the five truth-functional connectives, one important logical feature remains the same. No matter how long a compound statement is, the truth or falsity of the whole depends solely upon the truth-value of its component statements and the truth-table meaning of the connectives it employs.
+Thus, if <tt>&nbsp;A&nbsp;</tt> and <tt>&nbsp;B&nbsp;</tt> are true while <tt>&nbsp;X&nbsp;</tt> and <tt>&nbsp;Y&nbsp;</tt> are false, then the compound statement <tt>&nbsp;(A &bull; ~B) &sup; (~X &or; Y)&nbsp;</tt> must be true:
+since <tt>&nbsp;B&nbsp;</tt> is true, <tt>&nbsp;~ B&nbsp;</tt> must be false, making <tt>&nbsp;A &bull; ~B&nbsp;</tt> false; since <tt>&nbsp;X&nbsp;</tt> is false,
+<tt>&nbsp;~X&nbsp;</tt> must be true, making <tt>&nbsp;~X &or; Y&nbsp;</tt> true; but then the whole <tt>&nbsp;&sup;&nbsp;</tt>statement is <tt>&nbsp;<b>F</b> &sup; <b>T</b>&nbsp;</tt>, which is true.<br><br>
+
+<h4><a name="exer">Exercises in Propositional Logic</a></h4>
+<p>Check up on your understanding of the symbols of propositional logic by visiting
+<a target="new" href="http://abelard.phil.uiuc.edu/uilogic/proposit.htm">Philo the Logician</a>, a set of exercises from Bob Wengert of the University of Illinois.
+
+<br><br>
+
+<font size=-1>
+<p><center> <hr title="-"><a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="../../licensebuttons.net/l/by-sa/3.0/88x31.png" /></a><br><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type"><em>The Philosophy Pages</em></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="../index.html" property="cc:attributionName" rel="cc:attributionURL">Garth Kemerling</a> are licensed under a <a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br>Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="../referral/contact.html" rel="cc:morePermissions">http://www.philosophypages.com/referral/contact.htm</a>.
+<br><br>&copy;1997, 2011 Garth Kemerling.<br>Last modified 12 November 2011.<br>
+Questions, comments, and suggestions may be sent to:<br><a
+href="../referral/contact.html">the Contact Page.</a></center></font>
+
+</div></body>
+
+<!-- Mirrored from www.philosophypages.com/lg/e10a.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+</html>

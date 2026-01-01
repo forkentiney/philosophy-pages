@@ -1,0 +1,286 @@
+<html lang=en>
+
+<!-- Mirrored from www.philosophypages.com/lg/e11b.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+<head>
+<link rel="shortcut icon" href="../vy/logic.ico">
+
+<meta name="keywords" content="philosophy, logic, symbolic, statement, rule, replacement, communtation, association, distribution, tautology, exportation">
+<meta name="description" content="An explanation of the basic elements of elementary logic.">
+<meta name="author" content="Garth Kemerling">
+<title>Rules of Replacement</title>
+<link rel=stylesheet type="text/css" href="zzl.css" title="lstyle">
+<body bgcolor="#cccc99"><center><table summary="Menu" width=85% border=0 cellspacing=0 cellpadding=2>
+<tr>
+<th rowspan=3 bgcolor="ddaaaa"><a href="../index-2.html">Philosophy Pages</a><br><br><a target="new" href="http://www.britannica.com/"><img src="../vy/briguide.gif"></a>
+<th>&nbsp;
+<th bgcolor="ffffcc">&nbsp;&nbsp;<a href="../dy/index.html">Dictionary</a>&nbsp;&nbsp;
+<th bgcolor="ffffff"><a href="../sy.html">&nbsp;Study Guide&nbsp;</a>
+<th bgcolor="cccc99"><a href="index.html">Logic</a>
+<th>&nbsp;
+<th bgcolor="ffffff"><a href="../faq.html">F A Q s</a>
+<tr>
+<th>&nbsp;
+<th bgcolor="eeeeee"><a href="../hy/index.html">History</a>
+<th bgcolor="ccffcc"><a href="../dy/zt.html">Timeline</a>
+<th bgcolor="cccccc"><a href="../ph/index.html">Philosophers</a>
+<th>&nbsp;
+<th bgcolor="99ccff"><a href="../locke/index.html">Locke</a>
+<tr><th>&nbsp;
+</table>
+</center>
+<div><br>
+
+<h3>Rules of Replacement</h3>
+
+<h4><a name="repl">Replacement</a></h4>
+<p>We complete our development of the proof procedure for the propositional calculus by making use of another useful way of validly moving from step to step.
+Since two <a href="e10c.html#leq">logically equivalent</a> statements have the same truth-value on every possible combination of truth-values for their component parts,
+no change in the truth-value of any statement occurs when we replace one of them with the other.
+Thus, when constructing proofs of validity, we can safely use a statement containing either one of a pair of logical equivalents as the premise for a step whose conclusion is exactly the same, except that it contains the other one.
+<p>Although this would work for any pair of logically equivalent statement forms, remembering all of them would be cumbersome. Instead, we will once again rely upon a short list of ten
+<a href="../dy/r9.html#repl">rules of replacement</a> in our construction of proofs, and we have
+<a href="e10c.html">already examined</a> five of them:
+<pre>
+	D.N.		p &equiv; ~~p
+
+	DeM.		~(p &bull; q) &equiv; (~p &or; ~q)
+			~(p &or; q) &equiv; (~p &bull; ~q)
+
+	Impl.		(p&sup;q) &equiv; (~p &or; q)
+
+	Equiv.		[p&equiv;q] &equiv; [(p&sup;q) &bull; (q&sup;p)]
+			[p&equiv;q] &equiv; [(p &bull; q) &or; (~p &bull; ~q)]
+
+	Trans.		(p &sup; q) &equiv; (~q &sup; ~p)
+</pre>
+We'll add just five more, making a total of ten tautologous biconditionals to be used as rules of replacement.<br><br>
+
+<h4><a name="comm">Commutation</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th><tt>(p &or; q)</tt><th><tt>&equiv;</tt><th><tt>(q &or; p)</tt>
+<tr><th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>T<th>T<th>T
+<tr><th>F<th>T<th>T<th>T<th>T
+<tr><th>F<th>F<th>F<th>T<th>F
+</table>
+<p>The rule of replacement called <a href="../dy/c5.html#comm">Commutation</a> (Comm.) shows that statements of certain forms can simply be reversed.
+<br><br>
+In one form, this applies to all disjuctions:
+<pre>
+	(p &or; q) &equiv; (q &or; p)
+</pre> 
+ <br clear=all><br>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th><tt>(p &bull; q)</tt><th><tt>&equiv;</tt><th><tt>(q &bull; p)</tt>
+<tr><th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th>T<th>F
+<tr><th>F<th>T<th>F<th>T<th>F
+<tr><th>F<th>F<th>F<th>T<th>F
+</table>
+In its second form, Commutation establishes the same logical equivalence with respect to conjunctions:
+<pre>
+	(p &bull; q) &equiv; (q &bull; p)
+</pre> 
+The truth-tables for these two varieties of commutation show that we can safely replace any disjunction or conjunction with another in which the component elements of the original have been switched, since the truth values of the commuted compound statements do not change under any of the possible conditions.
+<br clear=all><br>
+
+<h4><a name="assoc">Association</a></h4>
+<a href="../dy/a9.html#assoc">Association</a> (Assoc.) permits modification of the parenthetical grouping of certain statements.<br clear=all><br>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>&nbsp;r&nbsp;<th><tt>[p&or;(q&or;r)]</tt><th><tt>&equiv;</tt><th><tt>[(p&or;q)&or;r]</tt>
+<tr><th>T<th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>T<th>F<th>T<th>T<th>T
+<tr><th>T<th>F<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th>T<th>T<th>T
+<tr><th>F<th>T<th>T<th>T<th>T<th>T
+<tr><th>F<th>T<th>F<th>T<th>T<th>T
+<tr><th>F<th>F<th>T<th>T<th>T<th>T
+<tr><th>F<th>F<th>F<th>F<th>T<th>F
+</table>
+Applied to disjunction, it has the form:
+<pre>
+ [p &or; (q&or;r)] &equiv; [(p&or;q) &or; r]
+</pre> 
+<br><br><br>This shows that the grouping of a string of disjuncts is irrelevant to the truth-value of the compound statement form. <br clear=all><br>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>&nbsp;r&nbsp;<th><tt>[p&bull;(q&bull;r)]</tt><th><tt>&equiv;</tt><th><tt>[(p&bull;q)&bull;r]</tt>
+<tr><th>T<th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>T<th>F<th>F<th>T<th>F
+<tr><th>T<th>F<th>T<th>F<th>T<th>F
+<tr><th>T<th>F<th>F<th>F<th>T<th>F
+<tr><th>F<th>T<th>T<th>F<th>T<th>F
+<tr><th>F<th>T<th>F<th>F<th>T<th>F
+<tr><th>F<th>F<th>T<th>F<th>T<th>F
+<tr><th>F<th>F<th>F<th>F<th>T<th>F
+</table>
+Applied to conjunction, it has the form:
+<pre>
+ [p &bull; (q&bull;r)] &equiv; [(p&bull;q) &bull; r]
+</pre> 
+<br><br><br>Used in tandem, the Commutative and Associative replacement rules make it possible to rearrange any series of disjunctions or conjunctions&#0151;no matter how long and complicated&#0151;into any new order and arrangement we wish to have.
+<br clear=all><br>
+
+<h4><a name="dist">Distribution</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>&nbsp;r&nbsp;<th><tt>p&bull;(q&or;r)</tt><th><tt>&equiv;</tt><th><tt>(p&bull;q)&or;(p&bull;r)</tt>
+<tr><th>T<th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>T<th>F<th>T<th>T<th>T
+<tr><th>T<th>F<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th>F<th>T<th>F
+<tr><th>F<th>T<th>T<th>F<th>T<th>F
+<tr><th>F<th>T<th>F<th>F<th>T<th>F
+<tr><th>F<th>F<th>T<th>F<th>T<th>F
+<tr><th>F<th>F<th>F<th>F<th>T<th>F
+</table>
+<p>The rule called <a href="../dy/d9.html#dist">Distribution</a> (Dist.) exhibits the systematic features of statements in which both disjunctions and conjunctions appear.<br><br>
+In one of its two forms, a conjunct is distributed over a disjunction:
+<pre>
+ [p &bull; (q&or;r)]&equiv;[(p&bull;q) &or; (p&bull;r)]
+</pre>
+ <br clear=all><br>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>&nbsp;r&nbsp;<th><tt>p&or;(q&bull;r)</tt><th><tt>&equiv;</tt><th><tt>(p&or;q)&bull;(p&or;r)</tt>
+<tr><th>T<th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>T<th>F<th>T<th>T<th>T
+<tr><th>T<th>F<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th>T<th>T<th>T
+<tr><th>F<th>T<th>T<th>T<th>T<th>T
+<tr><th>F<th>T<th>F<th>F<th>T<th>F
+<tr><th>F<th>F<th>T<th>F<th>T<th>F
+<tr><th>F<th>F<th>F<th>F<th>T<th>F
+</table>
+In the other form, a disjunct is distributed over a conjunction:
+<pre>
+ [p &or; (q&bull;r)]&equiv;[(p&or;q) &bull; (p&or;r)]
+</pre>
+The truth-tables should make it clear that both forms of distribution are reliable rules of replacement.
+<br clear=all><br>
+
+<h4><a name="exp">Exportation</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>&nbsp;r&nbsp;<th><tt>(p&bull;q)&sup;r</tt><th><tt>&equiv;</tt><th><tt>p&sup;(q&sup;r)</tt>
+<tr><th>T<th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>T<th>F<th>F<th>T<th>F
+<tr><th>T<th>F<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th>T<th>T<th>T
+<tr><th>F<th>T<th>T<th>T<th>T<th>T
+<tr><th>F<th>T<th>F<th>T<th>T<th>T
+<tr><th>F<th>F<th>T<th>T<th>T<th>T
+<tr><th>F<th>F<th>F<th>T<th>T<th>T
+</table>
+<p><a href="../dy/e9.html#exp">Exportation</a> (Exp.) is a rule of replacement of the form:
+<pre>
+ [(p&bull;q)&sup;r)]&equiv;[p&sup;(q&sup;r)]
+</pre>
+The truth-table at the right demonstrates that statements of these two forms are logically equivalent.<br><br>
+Please take careful notice of the difference between Exportation as a rule of replacement and the rule of inference called <a href="e11a.html#abs">Absorption</a>. Although they bear some similarity of structure, the rules are distinct and can be used differently in the construction of proofs.
+<br clear=all><br>
+
+<h4><a name="taut">Tautology</a></h4>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th><tt>&equiv;</tt><th><tt>(p &or; p)</tt>
+<tr><th>T<th>T<th>T
+<tr><th>F<th>T<th>F
+</table>
+<p>Finally, there are two forms of the rule called <a href="../dy/t.html#taut">Tautology</a> (Taut.):<br>
+the first involves disjunction,
+<pre>
+	p &equiv; (p &or; p)
+</pre>
+ <br clear=all>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th><tt>&equiv;</tt><th><tt>(p &bull; p) </tt>
+<tr><th>T<th>T<th>T
+<tr><th>F<th>T<th>F
+</table>
+and the second involves conjunction:
+<pre>
+	p &equiv; (p &bull; p)
+</pre>
+In each case, the rule permits replacement of any statement by (or with) another statement that is simply the disjunction or conjunction of the original statement with itself. Although such reasoning is rare in ordinary life, it will perform a significant formal role in our construction of proofs of validity.
+<br clear=all><br>
+
+<h4><a name="use">Replacement in Proofs</a></h4>
+<p>Using the rules of replacement in the construction of proofs is a fairly straightforward procedure.
+Since the rules are biconditionals, the replacement can work in either direction&#0151;right side for left, or left side for right.
+What is more, since the statement forms on either side are logically equivalent, they can be used to replace each other wherever they occur, even as component parts of a line.
+(When applying the nine rules of inference, on the other hand, we must always work with whole lines of a proof.)
+Consider the following argument:
+<pre>
+		A &or; (B &bull; ~C)
+
+		A &sup; D
+
+		~D &sup; C
+		____________
+
+		D
+</pre>
+As before, we begin by numbering each of the premises:
+<pre>
+		 1. A &or; (B &bull; ~C)		premise
+		 2. A &sup; D			premise
+		 3. ~D &sup; C			premise
+</pre>
+Next, notice that we can use our rules of replacement and inference to derive some part of the information conveyed by the first premise:
+<pre>
+		 1. A &or; (B &bull; ~C)		premise
+		 2. A &sup; D			premise
+		 3. ~D &sup; C			premise
+		 4. (A &or; B) &bull; (A &or; ~C)		1 Dist.
+		 5. (A &or; ~C) &bull; (A &or; B)		4 Comm.
+		 6. A &or; ~C			5 Simp.
+</pre>
+So long as each step is justified by reference to an earlier step (or steps) in the proof and to one of the nineteen rules, it must be a valid derivation.
+Next, let's work with the third premise a bit:
+<pre>
+		 1. A &or; (B &bull; ~C)		premise
+		 2. A &sup; D			premise
+		 3. ~D &sup; C			premise
+		 4. (A &or; B) &bull; (A &or; ~C)		1 Dist.
+		 5. (A &or; ~C) &bull; (A &or; B)		4 Comm.
+		 6. A &or; ~C			5 Simp.
+		 7. ~C &sup; ~~D			3 Trans.
+		 8. ~C &sup; D			7 D.N.
+</pre>
+Again, each step is justified by application of one of the rules of replacement to all or part of a preceding line in the proof.
+Now conjoin the second premise with our eighth line, and we've set up a constructive dilemma:
+<pre>
+		 1. A &or; (B &bull; ~C)		premise
+		 2. A &sup; D			premise
+		 3. ~D &sup; C			premise
+		 4. (A &or; B) &bull; (A &or; ~C)		1 Dist.
+		 5. (A &or; ~C) &bull; (A &or; B)		4 Comm.
+		 6. A &or; ~C			5 Simp.
+		 7. ~C &sup; ~~D			3 Trans.
+		 8. ~C &sup; D			7 D.N.
+		 9. (A &sup; D) &bull; (~C &sup; D)		2, 8 Conj.
+		10. D &or; D			9, 6 C.D.
+</pre>
+All that remains is to apply Tautology in order to reach our intended conclusion, so the entire proof will look like this:
+<pre>
+		 1. A &or; (B &bull; ~C)		premise
+		 2. A &sup; D			premise
+		 3. ~D &sup; C			premise
+		 4. (A &or; B) &bull; (A &or; ~C)		1 Dist.
+		 5. (A &or; ~C) &bull; (A &or; B)		4 Comm.
+		 6. A &or; ~C			5 Simp.
+		 7. ~C &sup; ~~D			3 Trans.
+		 8. ~C &sup; D			7 D.N.
+		 9. (A &sup; D) &bull; (~C &sup; D)		2, 8 Conj.
+		10. D &or; D			9, 6 C.D.
+		11. D				10 Taut.
+</pre>
+Don't worry if the intermediate stages of this proof were a little puzzling as we went along; what matters for right now is that you understand the use of the rules of replacement along with the rules of inference.
+<br><br><br>
+
+<font size=-1>
+<p><center> <hr title="-"><a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="../../licensebuttons.net/l/by-sa/3.0/88x31.png" /></a><br><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type"><em>The Philosophy Pages</em></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="../index.html" property="cc:attributionName" rel="cc:attributionURL">Garth Kemerling</a> are licensed under a <a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br>Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="../referral/contact.html" rel="cc:morePermissions">http://www.philosophypages.com/referral/contact.htm</a>.
+<br><br>&copy;1997, 2011 Garth Kemerling.<br>Last modified 12 November 2011.<br>
+Questions, comments, and suggestions may be sent to:<br><a
+href="../referral/contact.html">the Contact Page.</a></center></font>
+
+</div></body>
+
+<!-- Mirrored from www.philosophypages.com/lg/e11b.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+</html>

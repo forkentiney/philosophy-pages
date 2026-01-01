@@ -1,0 +1,115 @@
+<html lang=en>
+
+<!-- Mirrored from www.philosophypages.com/lg/e16.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+<head>
+<link rel="shortcut icon" href="../vy/logic.ico">
+
+<meta name="keywords" content="philosophy, logic, inductive, probability, joint, alternative, value">
+<meta name="description" content="An explanation of the basic elements of elementary logic.">
+<meta name="author" content="Garth Kemerling">
+<title>Probability</title>
+<link rel=stylesheet type="text/css" href="zzl.css" title="lstyle">
+<body bgcolor="#cccc99"><center><table summary="Menu" width=85% border=0 cellspacing=0 cellpadding=2>
+<tr>
+<th rowspan=3 bgcolor="ddaaaa"><a href="../index-2.html">Philosophy Pages</a><br><br><a target="new" href="http://www.britannica.com/"><img src="../vy/briguide.gif"></a>
+<th>&nbsp;
+<th bgcolor="ffffcc">&nbsp;&nbsp;<a href="../dy/index.html">Dictionary</a>&nbsp;&nbsp;
+<th bgcolor="ffffff"><a href="../sy.html">&nbsp;Study Guide&nbsp;</a>
+<th bgcolor="cccc99"><a href="index.html">Logic</a>
+<th>&nbsp;
+<th bgcolor="ffffff"><a href="../faq.html">F A Q s</a>
+<tr>
+<th>&nbsp;
+<th bgcolor="eeeeee"><a href="../hy/index.html">History</a>
+<th bgcolor="ccffcc"><a href="../dy/zt.html">Timeline</a>
+<th bgcolor="cccccc"><a href="../ph/index.html">Philosophers</a>
+<th>&nbsp;
+<th bgcolor="99ccff"><a href="../locke/index.html">Locke</a>
+<tr><th>&nbsp;
+</table>
+</center>
+<div><br>
+
+<h3>Probability</h3>
+
+<h4><a name="prob">Calculation of Probability</a></h4>
+<p>Since inductive arguments only tend to show that their conclusions are likely to be true, we turn in today's lesson to a quick overview of modern <a href="../dy/p9.html#prob">probability theory</a>.
+We assume from the outset that what may be said to be probable is the occurrence of an event, the sort of thing that could be described in a statement or proposition.
+<p>If we assign a numerical value of 1.0 as the probability of an event that must happen (signified by a tautologous statement) and a numerical value of 0.0 as that of an event that cannot happen (signified by a self-contradiction),
+then every degree of probability that lies in between these two extremes can be expressed as a decimal or fraction between 0.0 and 1.0.
+
+<p>There are two theories about what these numerical representations of probability might mean.
+A classical theory supposes that probability of an event is the degree to which it would be rational to believe the truth of a proposition describing the event.
+A frequency theory, on the other hand, supposes that the probability of an event is just a report of the relative frequency with which events of a similar sort have actually occurred in the past.
+In most of our examples here, we'll use simple combinatorial arithmetic to assign the initial probability <tt>&nbsp;P(A)</tt>, of an event <tt>&nbsp;A</tt> .
+From this, we can readily calculate the probability of the co-occurrence of separate events.
+<br><br>
+
+<h4><a name="joint">Joint Occurrences</a></h4>
+<p>Provided that we have already assigned initial probabilities for the occurrence of each of two events, <tt>&nbsp;A</tt> and <tt>&nbsp;B</tt>,
+then we calculate the probability that both events will happen by applying the formula for the <a href="../dy/j.html#jooc">joint occurrence</a> of two events:
+<pre>
+          P(A &bull; B) = P(A) &#215; P(B, if A)
+</pre>
+That is, the probability that both events will happen is equal to the probability that the first will happen multiplied by the probability that the second will happen if the first already has.
+Thus, for example: <ul>
+<li>The probability of getting heads on one toss of a coin is .5 (or 1/2), and so is the probability of getting heads on a second toss of the same coin.
+Thus, the probability of getting heads on both tosses of the coin is .5 &#215; .5, or .25 (1/4).
+<li>The chance of drawing one of the four aces from a standard deck of 52 cards is 4/52; but the chance of drawing a second ace is only 3/51, because after we drew the first ace, there were only three aces among the remaining 51 cards.
+Thus, the chance of drawing an ace on each of two draws is 4/52 &#215; 3/51, or 1/221.
+<li>Suppose that a bag contains three red marbles, four blue marbles, and five white marbles.
+Then the probability of pulling out a white marble without looking is 5/12, the probability of pulling out a second is 4/11, and the probability of pulling out a third is 3/10.
+So the probability of pulling out three white marbles is 5/12 &#215; 4/11 &#215; 3/10, or 1/22.
+(The chance of getting three red marbles, on the other hand, is 3/12 &#215; 2/11 &#215; 1/10, or only 1/220.)
+</ul>
+
+<h4><a name="altv">Alternative Occurrences</a></h4>
+<p>Again assuming that we have already assigned initial probabilities for the occurrence of the two events, <tt>&nbsp;A</tt> and <tt>&nbsp;B</tt>,
+then we  calculate the probability that at least one of these events events will happen by applying the formula for <a href="../dy/a2.html#altv">alternative occurrence</a> of two events:
+<pre>
+		P(A &or; B) = P(A) + P(B) - P(A &bull; B)
+</pre>
+That is, the probability that one or the other or both of two events will occur is equal to the probability that the first will occur, plus the probability that the second will occur, minus the probability that they both occur.
+(The final term in this formula provides a necessary correction because we have already counted the joint occurrence twice, once in each of the other terms.)
+Thus, for example: <ul>
+<li>The probability of getting heads on one toss of a coin is .5 (or 1/2), and so is the probability of getting heads on a second toss of the same coin.
+Thus, the probability of getting heads at least once during two tosses of the coin is .5 + .5 - (.5 &#215; .5), or .75 (3/4).
+<li>The chance of drawing one of the four aces from a standard deck of 52 cards is 4/52.
+Thus, the chance of drawing at least one ace in two draws is 4/52 + 4/52 - (4/52 &#215; 3/51), or 33/221.
+<br>[We can check out the accuracy of this result by calculating the chance of getting non-aces on both draws: 48/52 &#215; 47/51, or 188/221.
+Since it is certainly true that one of these outcomes will occur (and an impossibility that both will), the sum of their probabilities is equal to 1.]
+<li>Suppose that a bag contains three red marbles, four blue marbles, and five white marbles.
+Then the probability of pulling out a white marble without looking is 5/12.
+So the probability of pulling out at least one white marble in two tries is 5/12 + 5/12 - (5/12 &#215; 4/11), or 15/22.
+(The chance of getting at least one red marble, on the other hand, is 3/12 + 3/12 - (3/12 &#215; 2/11), or only 10/22.)
+</ul>
+
+<h4><a name="value">Expected Value</a></h4>
+<p>In any situation where there are multiple outcomes with different likelihoods, we calculate the <a href="../dy/e9.html#expv">expected value</a> of an investment
+by multiplying the value of each outcome by the probability that it will occur and then adding all of our results together.
+<p>Suppose, for example, that a charity raffle plans to sell 1000 tickets and then to award one prize of $1000, three prizes of $500, and twelve prizes of $100.
+Assuming that no ticket is permitted to win more than one prize, the likelihood that a ticket will win the grand prize is 1/1000,
+that it will win one of the second prizes 3/1000, that it will win one of the other prizes 12/1000, and that it will win no prize 984/1000.
+Summing the products, we find that:
+<pre>
+  Grand prize       1/1000   &#215;   $1000     $1.00
+  Second prize      3/1000   &#215;   $ 500     $1.50
+  Other prize      12/1000   &#215;   $ 100     $1.20
+  No prize        984/1000   &#215;   $   0     $ .00
+                                           _____
+
+                                           $3.70
+</pre>
+Since the expected value of each ticket is $3.70, if they cost $10.00, the charity will receive most of the proceeds.
+<br><br>
+
+<font size=-1>
+<p><center> <hr title="-"><a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="../../licensebuttons.net/l/by-sa/3.0/88x31.png" /></a><br><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type"><em>The Philosophy Pages</em></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="../index.html" property="cc:attributionName" rel="cc:attributionURL">Garth Kemerling</a> are licensed under a <a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br>Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="../referral/contact.html" rel="cc:morePermissions">http://www.philosophypages.com/referral/contact.htm</a>.
+<br><br>&copy;1997, 2011 Garth Kemerling.<br>Last modified 12 November 2011.<br>
+Questions, comments, and suggestions may be sent to:<br><a
+href="../referral/contact.html">the Contact Page.</a></center></font>
+
+</div></body>
+
+<!-- Mirrored from www.philosophypages.com/lg/e16.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+</html>

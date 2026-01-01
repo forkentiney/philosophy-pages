@@ -1,0 +1,249 @@
+<html lang=en>
+
+<!-- Mirrored from www.philosophypages.com/lg/e10c.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+<head>
+<link rel="shortcut icon" href="../vy/logic.ico">
+
+<meta name="keywords" content="philosophy, logic, symbolic, statement, taultologous, contradictory, contingent, double negation, demorgan's, implication, equivalence, transposition">
+<meta name="description" content="An explanation of the basic elements of elementary logic.">
+<meta name="author" content="Garth Kemerling">
+<title>Statement Forms</title>
+<link rel=stylesheet type="text/css" href="zzl.css" title="lstyle">
+<body bgcolor="#cccc99"><center><table summary="Menu" width=85% border=0 cellspacing=0 cellpadding=2>
+<tr>
+<th rowspan=3 bgcolor="ddaaaa"><a href="../index-2.html">Philosophy Pages</a><br><br><a target="new" href="http://www.britannica.com/"><img src="../vy/briguide.gif"></a>
+<th>&nbsp;
+<th bgcolor="ffffcc">&nbsp;&nbsp;<a href="../dy/index.html">Dictionary</a>&nbsp;&nbsp;
+<th bgcolor="ffffff"><a href="../sy.html">&nbsp;Study Guide&nbsp;</a>
+<th bgcolor="cccc99"><a href="index.html">Logic</a>
+<th>&nbsp;
+<th bgcolor="ffffff"><a href="../faq.html">F A Q s</a>
+<tr>
+<th>&nbsp;
+<th bgcolor="eeeeee"><a href="../hy/index.html">History</a>
+<th bgcolor="ccffcc"><a href="../dy/zt.html">Timeline</a>
+<th bgcolor="cccccc"><a href="../ph/index.html">Philosophers</a>
+<th>&nbsp;
+<th bgcolor="99ccff"><a href="../locke/index.html">Locke</a>
+<tr><th>&nbsp;
+</table>
+</center>
+<div><br>
+
+<h3>Statement Forms</h3>
+
+<p>In exactly the same sense that individual arguments may be substitution-instances of general argument forms, individual compound statements can be substitution-instances of general
+<a href="../dy/s9.html#stfo">statement forms</a>.
+In addition, just as we employ truth-tables to test the validity of those arguments, we can use truth-tables to exhibit interesting logical features of some statement forms.<br><br>
+
+<h4><a name="taut">Tautology</a></h4>
+<p>A statement form whose column in a truth-table contains nothing but <b>T</b>s is said to be <a href="../dy/t.html#taug">tautologous</a>.
+Consider, for example, the statement form:
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;<tt>~ </tt>p&nbsp;<th>&nbsp;p<tt> &or; ~ </tt>p&nbsp;
+<tr><th>T<th>F<th>T
+<tr><th>F<th>T<th>T
+</table>
+<pre>
+		p &or; ~p
+</pre>
+Notice that whether the component statement <tt>&nbsp;p&nbsp;</tt> is true or false makes no difference to the truth-value of the statement form; it yields a true statement in either case.
+But it follows that any compound statement which is a substitution-instance of this form&#0151;no matter what its content&#0151;can be used only to make true assertions.<br clear=all><br>
+
+<h4><a name="contr">Contradiction</a></h4>
+<p>A statement form whose column contains nothing but <b>F</b>s, on the other hand, is said to be <a href="../dy/c7.html#contr">self-contradictory</a>.
+For example:
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;<tt>~ </tt>p&nbsp;<th>&nbsp;p<tt> &bull; ~ </tt>p&nbsp;
+<tr><th>T<th>F<th>F
+<tr><th>F<th>T<th>F
+</table>
+<pre>
+		p &bull; ~p
+</pre>
+Again, the truth-value of the component statement doesn't matter; the result is always false.
+Compound statements that are substitution-instances of this statement form can never be used to make true assertions.
+<br clear=all><br>
+
+<h4><a name="cont">Contingency</a></h4>
+<p>Of course, most statement forms are neither tautologous nor self-contradictory; their truth-tables contain both <b>T</b>s and <b>F</b>s.
+Thus:
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th>p<tt> &sup; ~ </tt>q
+<tr><th>T<th>T<th>F
+<tr><th>T<th>F<th>T
+<tr><th>F<th>T<th>T
+<tr><th>F<th>F<th>T
+</table>
+<pre>
+		p &sup; ~q
+</pre>
+Since the column underneath it in the truth-table has at least one <b>T</b> and at least one <b>F</b>, this statement form is <a href="../dy/c7.html#cont">contingent</a>.
+Statements that are substitution-instances of this statement form may be either true or false, depending upon the truth-value of their component statements.<br clear=all><br>
+
+<h4><a name="ass">Assessing Statement Forms</a></h4>
+<p>Because all five of our statement connectives are truth-functional, the status of every statement-form is determined by its internal structure. In order to determine whether a statement form is tautologous, self-contradictory, or contingent, we simply construct a truth-table and inspect the appropriate column.
+Consider, for example, the statement form:
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th><tt>(p &or; ~q)<tt><th><tt>&sup;<tt><th><tt>~(p &bull; q)</tt>
+<tr><th>T<th>T<th>T<th>F<th>F
+<tr><th>T<th>F<th>T<th>T<th>T
+<tr><th>F<th>T<th>F<th>T<th>T
+<tr><th>F<th>F<th>T<th>T<th>T
+</table>
+<pre>
+	(p &or; ~q) &sup; ~(p &bull; q)
+</pre>
+Since the truth-table shows that statements of this form can be either true or false, depending upon the truth-values of their components, the statement form is contingent.<br clear=all><br>
+
+<h4><a name="leq">Logical Equivalence</a></h4>
+<p>A particularly interesting and useful group of cases comprises those tautologous statement forms whose main connective happens to be a <tt>&nbsp;&equiv;</tt> .
+In order for the <tt>&nbsp;&equiv;&nbsp;</tt> statement to be true on every line, the statement forms on either side of it must always have exactly the same truth-value.
+Statements that are substitution-instances of these two component statement-forms are then said to be <b>logically equivalent</b>: no matter what their content may happen to be, the conditions for their truth or falsity are exactly the same.
+Consider a few examples that recur frequently enough to warrant special names: <br><br>
+
+<h4><a name="dn">Double Negation</a></h4>
+<p><a href="../dy/d9.html#dn">Double Negation</a> (abbreviated as D.N.) has the form:
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th><tt>&equiv;<tt><th>&nbsp;<tt>~ ~ </tt>p&nbsp;
+<tr><th>T<th>T<th>T
+<tr><th>F<th>T<th>F
+</table>
+<pre>
+	p &equiv; ~ ~ p
+</pre>
+As the truth-table to the right clearly shows, this is a tautologous biconditional.
+No matter what simple or compoud statement we substitute for <tt>&nbsp;p&nbsp;</tt>,
+the same statement with two <tt>&nbsp;~</tt> s in front of it will have exactly the same truth-value as the original statement.
+<br clear=all><br>
+
+<h4><a name="dem">De Morgan's Theorems</a></h4>
+<p>A pair of more complex tautologous biconditionals are called <a href="../dy/d2.html#dem">De Morgan's Theorems</a> (DeM., for short).
+<br><br>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th><tt>~(p &bull; q)<tt><th><tt>&equiv;<tt><th><tt>(~p &or; ~q)</tt>
+<tr><th>T<th>T<th>F<th>T<th>F
+<tr><th>T<th>F<th>T<th>T<th>T
+<tr><th>F<th>T<th>T<th>T<th>T
+<tr><th>F<th>F<th>T<th>T<th>T
+</table>
+One form in which DeM.
+occurs is:
+<pre>
+	~(p &bull; q) &equiv; (~p &or; ~q)
+</pre>   
+As the truth-table at right shows, the statement forms on either side of the <tt>&nbsp;&lt&sup;&nbsp;</tt> always have the same truth-value.
+<br clear=all><br>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th><tt>~(p &or; q)<tt><th><tt>&equiv;<tt><th><tt>(~p &bull; ~q)</tt>
+<tr><th>T<th>T<th>F<th>T<th>F
+<tr><th>T<th>F<th>F<th>T<th>F
+<tr><th>F<th>T<th>F<th>T<th>F
+<tr><th>F<th>F<th>T<th>T<th>T
+</table>
+The other form of DeM.
+is:
+<pre>
+	~(p &or; q) &equiv; (~p &bull; ~q)
+</pre>   
+The truth-table at right demonstrates the logical equivalence of these two statement forms.
+<br><br>
+<p>Taken together, De Morgan's Theorems establish a systematic relationship between <tt>&nbsp;&bull;&nbsp;</tt>statements and <tt>&nbsp;&or;&nbsp;</tt>statements
+by providing a significant insight into the truth-conditions for the negations of both conjunctions and disjunctions.<br clear=all><br>
+
+<h4><a name="impl">Material Implication</a></h4>
+<p><a href="../dy/i.html#impl">Material Implication</a> (Impl.) has the form:
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th><tt>(p &sup; q)<tt><th><tt>&equiv;<tt><th><tt>(~ p &or; q)</tt>
+<tr><th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th>T<th>F
+<tr><th>F<th>T<th>T<th>T<th>T
+<tr><th>F<th>F<th>T<th>T<th>T
+</table>
+<pre>
+	(p &sup; q) &equiv; (~p &or; q)
+</pre>  
+This tautologous biconditional amounts to a logical definition of the <tt>&nbsp;&sup;&nbsp;</tt> connective in terms of <tt>&nbsp;&or;&nbsp;</tt> and the <tt>&nbsp;~&nbsp;</tt>.
+Since expressions of these two forms are logically equivalent, we could make conditional assertions without using the <tt>&nbsp;&sup;&nbsp;</tt> symbol at all, though our compound statements would be a bit more complicated.
+<br clear=all><br>
+
+<h4><a name="equiv">Material Equivalence</a></h4>
+<p>In similar fashion, <a href="../dy/e5.html#equiv">Material Equivalence</a> (Equiv.) provides alternative definitions of the <tt>&nbsp;&equiv;&nbsp;</tt> connective.<br><br>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th><tt>p&equiv;q<tt><th><tt>&equiv;<tt><th><tt>(p&sup;q)&bull;(q&sup;p)</tt>
+<tr><th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th>T<th>F
+<tr><th>F<th>T<th>F<th>T<th>F
+<tr><th>F<th>F<th>T<th>T<th>T
+</table>
+Its first form defines <tt>&nbsp;&equiv;&nbsp;</tt> in terms of <tt>&nbsp;&sup;&nbsp;</tt>, justifying the use of the term "biconditional:"
+<pre>
+[p&equiv;q]&equiv;[(p&sup;q)&bull;(q&sup;p)]
+</pre>
+ <br clear=all><br>
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th><tt>p&equiv;q<tt><th><tt>&equiv;<tt><th><tt>(p&bull;q)&or;(~p&bull;~q)</tt>
+<tr><th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th>T<th>F
+<tr><th>F<th>T<th>F<th>T<th>F
+<tr><th>F<th>F<th>T<th>T<th>T
+</table>
+Its second form defines <tt>&nbsp;&equiv;&nbsp;</tt> by pointing out its basic truth-conditions:
+<pre>
+[p&equiv;q]&equiv;[(p&bull;q)&or;(~p&bull;~q)]
+</pre>
+<br><br><br>Again, the logical equivalence of these three expressions provides us with a convenient way to comprehend and employ what is asserted in any statement of material equivalence.<br clear=all><br>
+
+<h4><a name="trans">Transposition</a></h4>
+<p>Finally, consider <a href="../dy/t9.html#trans">Transposition</a> (Trans.): 
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th><tt>(p&sup;q)<tt><th><tt>&equiv;<tt><th><tt>(~q&sup;~p)</tt>
+<tr><th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th>T<th>F
+<tr><th>F<th>T<th>T<th>T<th>T
+<tr><th>F<th>F<th>T<th>T<th>T
+</table>
+<pre>
+	(p &sup; q) &equiv; (~q &sup; ~p)
+</pre>
+The truth-table at the right demonstrates the legitimacy of this tautology, which shows the logical equivalence of any <tt>&nbsp;&sup;&nbsp;</tt>statement
+with another statement that results from switching its antecedent and consequent and negating both.<br><br> 
+<p>But beware of what happens if we confuse Trans.
+with either of two superficially similar statement forms: <br clear=all><br>
+
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th><tt>(p&sup;q)<tt><th><tt>&equiv;<tt><th><tt>(q&sup;p)</tt>
+<tr><th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th><font color="#FF0000">F</font><th>T
+<tr><th>F<th>T<th>T<th><font color="#FF0000">F</font><th>F
+<tr><th>F<th>F<th>T<th>T<th>T
+</table>
+The fallacy of <a href="../dy/c7.html#cvco">converting the conditional</a> switches the antecedent and consequent without negating them:
+<pre>
+	(p &sup; q) &equiv; (q &sup; p)
+</pre>
+The truth-table at the right shows that these statement forms are not logically equivalent, since the biconditional connecting them is contingent.<br clear=all><br>
+
+<table bgcolor="#ffcc99" summary="" border=2 align=right>
+<tr><th>&nbsp;p&nbsp;<th>&nbsp;q&nbsp;<th><tt>(p&sup;q)<tt><th><tt>&equiv;<tt><th><tt>(~p&sup;~q)</tt>
+<tr><th>T<th>T<th>T<th>T<th>T
+<tr><th>T<th>F<th>F<th><font color="#FF0000">F</font><th>T
+<tr><th>F<th>T<th>T<th><font color="#FF0000">F</font><th>F
+<tr><th>F<th>F<th>T<th>T<th>T
+</table>
+Similarly, the fallacy of <a href="../dy/n.html#negan">negating the antecedent and the consequent</a> negates both elements without switching them:
+<pre>
+	(p &sup; q) &equiv; (~p &sup; ~q)
+</pre>  
+Again, the truth-table shows that these statement-forms are not logically equivalent.<br clear=all><br>
+
+<font size=-1>
+<p><center> <hr title="-"><a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="../../licensebuttons.net/l/by-sa/3.0/88x31.png" /></a><br><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type"><em>The Philosophy Pages</em></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="../index.html" property="cc:attributionName" rel="cc:attributionURL">Garth Kemerling</a> are licensed under a <a rel="license" target="new" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.<br>Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="../referral/contact.html" rel="cc:morePermissions">http://www.philosophypages.com/referral/contact.htm</a>.
+<br><br>&copy;1997, 2011 Garth Kemerling.<br>Last modified 12 November 2011.<br>
+Questions, comments, and suggestions may be sent to:<br><a
+href="../referral/contact.html">the Contact Page.</a></center></font>
+
+</div></body>
+
+<!-- Mirrored from www.philosophypages.com/lg/e10c.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 01 Jan 2026 01:59:27 GMT -->
+</html>

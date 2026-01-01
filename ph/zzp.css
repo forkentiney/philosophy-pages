@@ -1,0 +1,14 @@
+body {background: url(../vy/aaa.jpg); background-attachment: fixed}
+a:link {color: #000099}
+a:visited {color: #990000}
+a:active {color: #006600}
+div {font-family: times new roman, serif; margin-left: 20px; width: 650px}
+h2, h5 {text-align: center}
+h5 {font-weight: normal}
+p {text-indent: 15px}
+em {font-family: arial, helvetica, sans-serif; font-style: normal}
+pre, tt {font-family: courier, monospace}
+span {font-family: symbol}
+cite {font-style: italic}
+a {text-decoration: none}
+
