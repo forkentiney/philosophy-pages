@@ -108,8 +108,10 @@ a:hover {
   margin: 48px 0;
 }
 
-.about {
+.content {
   grid-column: 2;
+  display: flex;
+  flex-direction: column;
 }
 
 #footer {
