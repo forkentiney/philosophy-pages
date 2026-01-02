@@ -34,14 +34,20 @@ body {
   color: var(--text);
 }
 
-h1, h2, h3, h4 {
-  color: hsl(0 40% 20%);
+h2, h3, h4 {
+  color: var(--titles);
+  font-weight: 800;
 }
 
 h1 {
+  color: hsl(0 40% 20%);
   font-size: 36px;
   font-weight: 900;
   font-family: "Times New Roman", serif;
+}
+
+h2 {
+  font-size: 24px;
 }
 
 p {
@@ -139,4 +145,33 @@ a:hover {
 
 .shadow {
   box-shadow: 0px 8px 12px var(--shadow);
+}
+
+.portrait {
+  height: 24px;
+  width: 24px;
+  margin: 4px;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.person {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  list-style-type: none;
+}
+
+.index ol {
+  list-style-type: none;
 }
