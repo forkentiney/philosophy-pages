@@ -98,8 +98,6 @@ a:hover {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  position: sticky;
-  top: 0;
   padding: 8px;
 }
 
@@ -167,6 +165,11 @@ a:hover {
   margin: 2px 64px;
 }
 
+.index {
+  display: flex;
+  flex-direction: column;
+}
+
 .alphabet {
   display: flex;
   flex-wrap: wrap;
@@ -177,4 +180,22 @@ a:hover {
 
 .index ol {
   list-style-type: none;
+}
+
+@media screen and (max-width: 820px) {
+  #main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  #main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .person {
+    margin: 0;
+  }
 }
