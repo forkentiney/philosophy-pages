@@ -58,7 +58,7 @@ li {
 }
 
 a:hover {
-  color: black;
+  color: var(--primary);
 }
 
 .viewport {
@@ -73,6 +73,10 @@ a:hover {
   flex-direction: column;
   background-color: var(--bg-light);
   color: hsl(0 40% 20%);
+}
+
+#header a:hover {
+  color: black;
 }
 
 #title {
