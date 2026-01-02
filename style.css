@@ -1,10 +1,10 @@
 :root {
   --bg-dark: hsl(180 0% 10%);
   --shadow: hsl(240 10% 5%);
-  --text: hsl(0 0 95%);
+  --text: hsl(0 0 85%);
   --titles: hsl(0 0% 100%);
   --bg-light: hsl(0 40% 80%);
-  --text-muted: hsl(0 0% 90%);
+  --text-muted: hsl(0 0% 75%);
   --primary: hsl(0 40% 80%);
   --secondary: hsl(180 45% 50%);
   --danger: hsl(360 95% 60%);
