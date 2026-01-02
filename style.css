@@ -99,6 +99,7 @@ a:hover {
   align-items: center;
   flex-wrap: wrap;
   padding: 8px;
+  font-variant: small-caps;
 }
 
 #nav a {
@@ -155,7 +156,13 @@ a:hover {
 #main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 48px auto;
+  margin: 24px auto 48px auto;
+  background-color: hsl(180 0% 12%);
+  border: 2px solid var(--primary);
+  border-top: 2px solid hsl(0 40% 90%);
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px var(--shadow);
+  padding: 12px;
 }
 
 .person {
