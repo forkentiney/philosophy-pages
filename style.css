@@ -150,18 +150,21 @@ a:hover {
 .portrait {
   height: 24px;
   width: 24px;
-  margin: 4px;
+  margin: 4px 8px;
+  border-radius: 100%;
 }
 
 #main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  margin: 48px auto;
 }
 
 .person {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin: 2px 64px;
 }
 
 .alphabet {
